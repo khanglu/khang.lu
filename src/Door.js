@@ -25,7 +25,7 @@ const shaking = keyframes`{
 	70% { transform: translate(2px, 1px) rotate(-1deg); }
 	80% { transform: translate(-1px, -1px) rotate(1deg); }
 	90% { transform: translate(2px, 2px) rotate(0deg); }
-	100% { transform: translate(1px, -2px) rotate(-1deg); }
+	100% { transform: translate(1px, 2px) rotate(-1deg); }
 }
 `
 
@@ -34,7 +34,7 @@ const DoorImg = styled.img`
   height: 20vh;
   filter : hue-rotate(${props => props.theme.doorColor}deg);
   
-  &:hover, &:focus {
+  &:hover {
     position: relative;
     bottom: -2px;
 	  animation-name: ${shaking};
