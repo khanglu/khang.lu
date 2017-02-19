@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Tabitha from './Tabitha'
-import {textColor} from '../theme'
 
 const NavBar = () => (
   <NavBarContainer>
@@ -21,19 +20,20 @@ const NavBarContainer = styled.div`
 const NavLinkContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 2em;
+  padding-right: 2em;
 `
 
 const NavLink = styled.a`
-  color: ${textColor}
+  color: ${props => props.theme.textColor}
   flex: 0 0 auto;
   margin: 0 1em;
   text-decoration: none;
   font-family: 'Pacifico', cursive;
   
+  transition: .2s ease-in-out;
   &:hover {
-    opacity: .7
-  }
+      transform: scale(1.1);
+    }
 `
 
 export default NavBar

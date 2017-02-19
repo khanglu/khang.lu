@@ -1,28 +1,50 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes} from 'styled-components'
 import doorImgSrc from './door.png'
-import Heading from './Heading'
 
 const Door = (props) => (
   <DoorContainer>
-    <Heading tag={'h2'}>{props.title}</Heading>
-    <DoorImg color={props.color} src={doorImgSrc} />
+    <DoorImg onClick={() => props.changeTheme()} color={props.color} src={doorImgSrc} />
   </DoorContainer>
 )
 
 const DoorContainer = styled.div`
-  text-align: center;
-  flex: 0 0 auto;
   margin: 0 8vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 `;
+
+const shaking = keyframes`{
+	0% { transform: translate(2px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-2px, 0px) rotate(1deg); }
+	30% { transform: translate(0px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-2px, 1px) rotate(0deg); }
+	70% { transform: translate(2px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(2px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+`
 
 const DoorImg = styled.img`
   user-select: none;
-  width: 10vh;
-  filter : hue-rotate(${props => props.color}deg);
-`;
+  height: 20vh;
+  filter : hue-rotate(${props => props.theme.doorColor}deg);
+  
+  &:hover, &:focus {
+    position: relative;
+    bottom: -2px;
+	  animation-name: ${shaking};
+	  animation-duration: 0.8s;
+    transform-origin: 50% 50%;
+	  animation-iteration-count: infinite;
+	  animation-timing-function: linear;
+  }
+`
+
+
 
 export default Door;

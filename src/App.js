@@ -1,14 +1,47 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, {Component} from 'react'
+import styled, {ThemeProvider} from 'styled-components'
 import Door from './Door'
 import NavBar from './NavBar/'
 import Hero from './Hero'
-import {bgColor} from './theme'
+import {allThemes} from './theme'
 
-const App = () =>{
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      themeIndex: 0
+    }
 
-  const Background = styled.div`
-  background-color: ${bgColor};
+    this.changeTheme = this.changeTheme.bind(this)
+  }
+
+  changeTheme() {
+    if (this.state.themeIndex === allThemes.length - 1) {
+      this.setState({themeIndex: 0})
+    } else {
+      this.setState({themeIndex: this.state.themeIndex + 1})
+    }
+  }
+
+  render() {
+    const {themeIndex} = this.state
+    return (
+      <ThemeProvider theme={allThemes[themeIndex]}>
+        <Background>
+          <NavBar />
+          <Hero />
+          <Hallway>
+            <Door changeTheme={this.changeTheme} color={0} title="" />
+            <Floor />
+          </Hallway>
+        </Background>
+      </ThemeProvider>
+    )
+  }
+}
+
+const Background = styled.div`
+  background-color: ${props => props.theme.bgColor};
   position: fixed;
   top: 0;
   left: 0;
@@ -21,19 +54,6 @@ const App = () =>{
   object-fit: contain;
 `;
 
-  return (
-  <Background>
-    <NavBar />
-    <Hero />
-    <Hallway>
-      <Doors>
-        <Door color={0} title="" />
-      </Doors>
-      <Floor />
-    </Hallway>
-  </Background>
-)}
-
 
 const Hallway = styled.div`
   bottom: 0;
@@ -44,15 +64,6 @@ const Hallway = styled.div`
   justify-content: flex-end;
 `;
 
-// In case I want more doors
-const Doors = styled.div`
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  bottom: -2px;
-  position: relative;
-`;
-
 const Floor = styled.div`
   height: 1vh;
   width: 100%;
@@ -61,6 +72,7 @@ const Floor = styled.div`
   border-top: 2px;
   border-top-style: outset;
   border-color: #d1571e;
+  filter : hue-rotate(${props => props.theme.doorColor - 10}deg);
 `;
 
 export default App;
