@@ -4,16 +4,19 @@ import Door from './Door'
 import NavBar from './NavBar/'
 import Hero from './Hero'
 import {allThemes} from './theme'
+import Corgi from './Corgi'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
       // Get random number between 0 and 3 to randomize theme
-      themeIndex: Math.floor(Math.random() * allThemes.length)
+      themeIndex: Math.floor(Math.random() * allThemes.length),
+      corgiCount: 0
     }
 
     this.changeTheme = this.changeTheme.bind(this)
+    this.addCorgi = this.addCorgi.bind(this)
   }
 
   changeTheme() {
@@ -24,17 +27,29 @@ class App extends Component {
     }
   }
 
+  addCorgi() {
+    if (this.state.corgiCount < 20) {
+      this.setState({corgiCount: this.state.corgiCount + 1})
+    }
+  }
+
   render() {
     const {themeIndex} = this.state
+    let corgis = []
+    for (let i = 0; i < this.state.corgiCount; i++) {
+      corgis.push(<Corgi key={i} />)
+    }
+
     return (
       <ThemeProvider theme={allThemes[themeIndex]}>
         <Background>
           <NavBar />
-          <Hero />
+          <Hero addCorgi={this.addCorgi} />
           <Hallway>
             <Door changeTheme={this.changeTheme} color={0} title="" />
             <Floor />
           </Hallway>
+          {corgis}
         </Background>
       </ThemeProvider>
     )
