@@ -37,7 +37,7 @@ const DoorImg = styled.img`
   &:hover {
     position: relative;
     bottom: -2px;
-	  animation-name: ${shaking} 0.8s infinite;
+	  animation: ${shaking} 0.8s infinite;
 	  animation-timing-function: linear;
   }
 `
