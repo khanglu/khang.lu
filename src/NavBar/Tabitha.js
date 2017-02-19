@@ -16,7 +16,14 @@ const TabithaContainer = styled.div`
     
     path {
       fill: ${props => props.theme.textColor}
+      pointer-events: all;
     }
+    
+    transition: .3s;
+    &:hover {
+      transform: rotate(30deg);
+    }
+    
   }
   
 

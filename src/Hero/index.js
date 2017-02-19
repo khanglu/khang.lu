@@ -18,12 +18,13 @@ const Hero = (props) => {
     display: inline;
     border-radius: 3px;
     margin: 0 .1em;
-    padding: 0 .17em;
+    padding: .1em .2em;
     display: inline-block;
     background-color: ${props => props.theme.textColor};
     color: ${props => props.theme.bgColor};
-    font-family: 'Bungee', sans-serif;
-    font-size: 6.7vh;
+    font-family: 'Righteous', sans-serif;
+    letter-spacing: .2vh;
+    font-size: 7.2vh;
   `
 
   const SocialBlock = styled.div`

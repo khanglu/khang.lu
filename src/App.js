@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      themeIndex: 0
+      // Get random number between 0 and 3 to randomize theme
+      themeIndex: Math.floor(Math.random() * allThemes.length)
     }
 
     this.changeTheme = this.changeTheme.bind(this)
