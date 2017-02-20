@@ -8,10 +8,10 @@ const Corgi = () => (
 
 const run = keyframes`
   from {
-    right: -20vw;
+    right: -15vw;
   }
   to {
-    right: 120vw;
+    right: 115vw;
   }
 `
 
