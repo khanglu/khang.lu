@@ -8,13 +8,15 @@ const Corgi = () => (
 
 const run = keyframes`
   from {
-    right: -10vw;
+    right: -20vw;
   }
   to {
-    right: 100vw;
+    right: 120vw;
   }
 `
 
+/* Set animation duration to be proportional with screen size,
+that way we have little corgi at the same speed across devices */
 const CorgiGif = styled.img`
   z-index: 99;
   user-select: none;
@@ -22,11 +24,10 @@ const CorgiGif = styled.img`
   
   display: inline;
   position: fixed;
-  bottom: -6vh;
-  height: 30vh;
-  animation: ${run} 3s infinite;
+  bottom: -4vh;
+  height: 20vh;
+  animation: ${run} ${(window.innerWidth/window.innerHeight)*5}s infinite;
 	animation-timing-function: linear;
 `
-
 
 export default Corgi;
