@@ -1,6 +1,6 @@
 ## Corgi House
 
-### Made with love and
+### Made with love using
 - [create-react-app](https://github.com/facebookincubator/create-react-app)- Create React apps with no build configuration
 - [styled-components](https://github.com/styled-components/styled-components)- Visual primitives for the component age
 - Google Fonts

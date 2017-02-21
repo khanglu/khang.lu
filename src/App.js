@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import styled, {ThemeProvider} from 'styled-components'
-import Door from './Door'
-import NavBar from './NavBar/'
-import Hero from './Hero'
 import {allThemes} from './theme'
+import NavBar from './NavBar'
+import Hero from './Hero'
 import Corgi from './Corgi'
+import Door from './Door'
 
 class App extends Component {
   constructor() {

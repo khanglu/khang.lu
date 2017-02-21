@@ -8,7 +8,7 @@ const Hero = (props) => (
     <NameBlock>Lu</NameBlock>
     <SocialBlock>
       <SocialLink href="https://www.linkedin.com/in/khanglu/">LinkedIn</SocialLink>
-      <SocialLink href="mailto:lulephuckhang@gmail.com">Email</SocialLink>
+      <SocialLink href="mailto:info@khang.lu">Email</SocialLink>
       <SocialLink href="https://www.facebook.com/khanglplu">Facebook</SocialLink>
       <SocialLink onClick={()=>props.addCorgi()}>Add a Corgi</SocialLink>
     </SocialBlock>
