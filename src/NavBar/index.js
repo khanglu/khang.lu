@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Tabitha from './Tabitha'
 
 const NavBar = () => (
   <NavBarContainer>
     <Tabitha />
     <NavLinkContainer>
-      <NavLink href="/about">About</NavLink>
-      <NavLink href="/about">My Work</NavLink>
-      <NavLink href="/about">Contact</NavLink>
+      <NavLink to="about">About</NavLink>
+      <NavLink to="about">My Work</NavLink>
     </NavLinkContainer>
   </NavBarContainer>
 )
@@ -23,7 +23,7 @@ const NavLinkContainer = styled.div`
   padding-right: 2em;
 `
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   color: ${props => props.theme.textColor}
   flex: 0 0 auto;
   margin: 0 1em;

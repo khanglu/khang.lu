@@ -2,21 +2,18 @@ import React, {Component} from 'react'
 import styled, {ThemeProvider} from 'styled-components'
 import {allThemes} from './theme'
 import NavBar from './NavBar'
-import Hero from './Hero'
-import Corgi from './Corgi'
-import Door from './Door'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Homepage from './routes/Homepage'
+import About from './routes/About'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
       // Get random number between 0 and 3 to randomize theme
-      themeIndex: Math.floor(Math.random() * allThemes.length),
-      corgiCount: 0
+      themeIndex: Math.floor(Math.random() * allThemes.length)
     }
-
     this.changeTheme = this.changeTheme.bind(this)
-    this.addCorgi = this.addCorgi.bind(this)
   }
 
   changeTheme() {
@@ -27,31 +24,22 @@ class App extends Component {
     }
   }
 
-  addCorgi() {
-    if (this.state.corgiCount < 20) {
-      this.setState({corgiCount: this.state.corgiCount + 1})
-    }
-  }
-
   render() {
     const {themeIndex} = this.state
-    let corgis = []
-    for (let i = 0; i < this.state.corgiCount; i++) {
-      corgis.push(<Corgi key={i} />)
-    }
-
     return (
-      <ThemeProvider theme={allThemes[themeIndex]}>
-        <Background>
-          <NavBar />
-          <Hero addCorgi={this.addCorgi} />
-          <Hallway>
-            <Door changeTheme={this.changeTheme} color={0} title="" />
-            <Floor />
-          </Hallway>
-          {corgis}
-        </Background>
-      </ThemeProvider>
+      <BrowserRouter>
+        <ThemeProvider theme={allThemes[themeIndex]}>
+          <Background>
+            <NavBar />
+            <Route exact path="/" render={() => (
+              <Homepage
+                changeTheme={this.changeTheme}
+              />
+            )} />
+            <Route path="/about" component={Homepage} />
+          </Background>
+        </ThemeProvider>
+      </BrowserRouter>
     )
   }
 }
@@ -68,27 +56,7 @@ const Background = styled.div`
   width: 100%;
   height: 100%;
   object-fit: contain;
-`;
+`
 
 
-const Hallway = styled.div`
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-`;
-
-const Floor = styled.div`
-  height: 1vh;
-  width: 100%;
-  background-color: #f26730;
-  
-  border-top: 2px;
-  border-top-style: outset;
-  border-color: #d1571e;
-  filter : hue-rotate(${props => props.theme.doorColor - 10}deg);
-`;
-
-export default App;
+export default App
