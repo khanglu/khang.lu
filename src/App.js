@@ -7,16 +7,26 @@ import Homepage from './routes/Homepage'
 import About from './routes/About'
 
 class App extends Component {
-  constructor() {
+  constructor () {
     super()
     this.state = {
       // Get random number between 0 and 3 to randomize theme
-      themeIndex: Math.floor(Math.random() * allThemes.length)
+      themeIndex: Math.floor(Math.random() * allThemes.length),
+      isStacked: window.innerWidth/window.innerHeight < 1.4
     }
     this.changeTheme = this.changeTheme.bind(this)
+    this.handleResize = this.handleResize.bind(this)
   }
 
-  changeTheme() {
+  componentDidMount () {
+    window.addEventListener('resize', this.handleResize)
+  }
+
+  handleResize () {
+    this.setState({isStacked: window.innerWidth/window.innerHeight < 1.4})
+  }
+
+  changeTheme () {
     if (this.state.themeIndex === allThemes.length - 1) {
       this.setState({themeIndex: 0})
     } else {
@@ -24,22 +34,27 @@ class App extends Component {
     }
   }
 
-  render() {
+  render () {
     const {themeIndex} = this.state
     return (
+      <ThemeProvider theme={allThemes[themeIndex]}>
       <BrowserRouter>
-        <ThemeProvider theme={allThemes[themeIndex]}>
-          <Background>
-            <NavBar />
+        <div>
             <Route exact path="/" render={() => (
-              <Homepage
-                changeTheme={this.changeTheme}
-              />
+              <Background>
+                <NavBar page='homepage' />
+                <Homepage changeTheme={this.changeTheme} />
+              </Background>
             )} />
-            <Route path="/about" component={Homepage} />
-          </Background>
-        </ThemeProvider>
+            <Route path="/about" render={() => (
+              <div>
+                <NavBar isStacked={this.state.isStacked} page='about' />
+                <About isStacked={this.state.isStacked} />
+              </div>
+            )} />
+        </div>
       </BrowserRouter>
+      </ThemeProvider>
     )
   }
 }
@@ -51,7 +66,6 @@ const Background = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0;
   box-sizing: border-box;
   width: 100%;
   height: 100%;

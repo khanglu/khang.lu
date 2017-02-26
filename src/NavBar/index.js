@@ -3,17 +3,20 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Tabitha from './Tabitha'
 
-const NavBar = () => (
-  <NavBarContainer>
+const NavBar = (props) => (
+  <NavBarContainer {...props}>
     <Tabitha />
     <NavLinkContainer>
-      <NavLink to="about">About</NavLink>
-      <NavLink to="about">My Work</NavLink>
+      <NavLink {...props} to="about">About</NavLink>
+      <NavLink {...props} to="about">My Work</NavLink>
     </NavLinkContainer>
   </NavBarContainer>
 )
 
 const NavBarContainer = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 `
@@ -24,7 +27,12 @@ const NavLinkContainer = styled.div`
 `
 
 const NavLink = styled(Link)`
-  color: ${props => props.theme.textColor}
+  color: ${props => 
+    props.isStacked 
+      ? props.theme.textColor 
+      : props.page === 'about' 
+        ? props.theme.bgColor 
+        : props.theme.textColor}
   flex: 0 0 auto;
   margin: 0 1em;
   text-decoration: none;
