@@ -10,6 +10,7 @@ const Tabitha = (props) => (
 )
 
 const TabithaContainer = styled.div`
+  user-select: none;
   svg {
     height: 3em;
     margin: 1em;

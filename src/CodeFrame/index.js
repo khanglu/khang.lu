@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CodeBlock = (props) => {
+const CodeFrame = (props) => {
   return (
     <CodeWrapper {...props}>
       <CodeContainer {...props}>
@@ -25,23 +25,23 @@ const CodeWrapper = styled.div`
 `
 
 const CodeContainer = styled.div`
-    padding: 1vw 0;
-    width: 100%;
-    word-wrap:break-word;
-    background: ${props => props.theme.textColor};
-    border-radius: 2vw; 
-    transition: .5s;
-  `
+  padding: 1vw 0;
+  width: 100%;
+  word-wrap:break-word;
+  background: ${props => props.theme.textColor};
+  border-radius: 2vw; 
+  transition: .5s;
+`
 
 const CodeLine = styled.div`
-    color: ${props => props.theme.bgColor};
-    padding: 0 1vw;
-    font-size: ${props => (props.portraitMode ? '2vw' : '1vw')};
-    
-    pre {
-      margin: .4vw;
-    }
-  `
+  color: ${props => props.theme.bgColor};
+  padding: 0 1vw;
+  font-size: ${props => (props.portraitMode ? '2vw' : '1vw')};
+  
+  pre {
+    margin: .4vw;
+  }
+`
 
 
-export default CodeBlock
+export default CodeFrame

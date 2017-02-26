@@ -4,16 +4,16 @@ const devList = [
     code: [
       "/*",
       "JavaScript:",
-      "Vanilla ES6+, React and its ecosystem, Redux, Webpack, Gulp",
+      " - Vanilla ES6+, React and its ecosystem, Redux, Webpack, Gulp",
       "  ",
       "STYLING:",
-      "SASS, CSS Modules, styled-components, radium",
+      " - SASS, CSS Modules, styled-components, radium",
       " ",
       "WORKFLOW TOOLS:",
-      "GitHub, GitFlow, Agile Development, BitBucket, Jira, Trello",
+      " - GitHub, GitFlow, Agile Development, BitBucket, Jira, Trello",
       " ",
       "DESIGN:",
-      "Photoshop, Illustrator",
+      " - Photoshop, Illustrator",
       "*/"
     ]
   },

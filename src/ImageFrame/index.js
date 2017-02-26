@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ImageBlock = (props) => {
+const ImageFrame = (props) => {
   return (
     <ImageContainer {...props}>
       <Image {...props} src={props.image.src}/>
@@ -13,7 +13,6 @@ const ImageBlock = (props) => {
 }
 
 const ImageContainer = styled.div`
-  
   display: inline-block;
   width: ${props => (props.portraitMode ? '100vw' : props.compact ? 0 : '46vw')};
   overflow: hidden;
@@ -31,8 +30,8 @@ const Description = styled.p`
   ${props => !props.portraitMode && props.compact && 'opacity: 0;'}
   color: ${props => props.theme.bgColor}
   transition: .2s;
-  font-size: ${props => props.portraitMode ? '4vw': '2vw'};
+  font-size: ${props => props.portraitMode ? '3vw': '1.3vw'};
   min-width: 46vw;
 `
 
-export default ImageBlock
+export default ImageFrame

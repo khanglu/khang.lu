@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import CodeBlock from '../CodeBlock'
+import CodeFrame from '../CodeFrame'
 import devList from './devList'
 
 class DevBlock extends Component {
@@ -35,14 +35,16 @@ class DevBlock extends Component {
               ))}
             </List>
           </SkillsBlock>
-          <CodeBlock {...this.props} code={devList[this.state.activeCodeItem].code} />
+          <CodeFrame {...this.props} code={devList[this.state.activeCodeItem].code} />
         </DevContent>
       </DevWrapper>
     )
   }
 }
 
+// overflow-y: hidden; to handle Safari
 const DevWrapper = styled.div`
+  overflow-y: hidden;
   ${props => props.portraitMode || 'height: 100vh;'}
   background: ${props => props.theme.bgColor};
   transition: .5s;
@@ -53,7 +55,6 @@ const DevWrapper = styled.div`
           ? 'flex-basis: 25vw;'
           : 'flex-basis: 75vw;'
   )}
- 
 `
 const DevHeading = styled.h1`
   text-align: ${ props => props.portraitMode ? 'center' : 'right'};

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 import DevBlock from '../DevBlock'
 import BioBlock from '../BioBlock'
+import bioItems from '../BioBlock/bioItems'
 
 class About extends Component {
   constructor (props) {
@@ -23,6 +24,7 @@ class About extends Component {
 
   render () {
     const {portraitMode} = this.props
+
     return(
       <AboutContainer portraitMode={portraitMode}>
         <DevBlock
@@ -35,6 +37,11 @@ class About extends Component {
           compact={this.state.isDevBig}
           onMouseEnter={() => this.state.portraitMode || this.enlarge('bio')}
         />
+        {
+          bioItems.map((item) => {
+            return <LazyLoadImage src={item.src} />
+          })
+        }
       </AboutContainer>
     )
   }
@@ -43,6 +50,12 @@ class About extends Component {
 const AboutContainer = styled.div`
   display: flex;
   flex-direction: ${props => props.portraitMode ? 'column' : 'row'};
+`
+
+const LazyLoadImage = styled.img`
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
 `
 
 export default About

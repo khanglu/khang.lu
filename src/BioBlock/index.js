@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import bioItems from './bioItems'
-import ImageBlock from '../ImageBlock'
+import ImageFrame from '../ImageFrame'
 
 class BioBlock extends Component {
   constructor (props) {
@@ -35,7 +35,7 @@ class BioBlock extends Component {
               ))}
             </List>
           </BioList>
-          <ImageBlock {...this.props} image={bioItems[this.state.activeImage]} />
+          <ImageFrame {...this.props} image={bioItems[this.state.activeImage]} />
       </BioWrapper>
     )
   }
@@ -60,7 +60,7 @@ const BioHeading = styled.h1`
   font-family: 'Anton', sans-serif;
   margin: 2vw 0;
   position: relative;
-  left: -3px;
+  left: -4px;
 `
 
 const BioList = styled.div`
