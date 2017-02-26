@@ -60,7 +60,7 @@ const BioHeading = styled.h1`
   font-family: 'Anton', sans-serif;
   margin: 2vw 0;
   position: relative;
-  left: -4px;
+  left: -3px;
 `
 
 const BioList = styled.div`
@@ -86,8 +86,8 @@ const ListItem = styled.li`
   cursor: pointer;
   ${props => props.portraitMode && 'display: inline-block; margin: 0 3vw;'}
   ${props => props.active && !props.compact && 'font-family: Anton; font-size: 2.5vw;'}
-  transition: .2s;
   ${props => props.active && props.portraitMode && 'font-family: Anton; font-size: 6vw;'}
+  transition: .2s;
 `
 
 export default BioBlock

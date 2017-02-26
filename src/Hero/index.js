@@ -9,8 +9,8 @@ const Hero = (props) => (
     <SocialBlock>
       <SocialLink href="https://www.linkedin.com/in/khanglu/">LinkedIn</SocialLink>
       <SocialLink href="mailto:info@khang.lu">Email</SocialLink>
-      <SocialLink href="https://www.facebook.com/khanglplu">Facebook</SocialLink>
-      <SocialLink onClick={()=>props.addCorgi()}>Add a Corgi</SocialLink>
+      <SocialLink href="https://github.com/khanglu/khang.lu">GitHub</SocialLink>
+      <SocialLink style={{fontSize: '2.3vh'}} onClick={()=>props.addCorgi()}>Add a Corgi</SocialLink>
     </SocialBlock>
   </HeroBlock>
 )
@@ -26,8 +26,8 @@ const HeroBlock = styled.div`
 const HeroHeading = styled.h2`
   color: ${props => props.theme.textColor};
   font-family: 'Unica One', cursive;
-  font-size: 4.55vh;
-  margin: .8vh 0;
+  font-size: 4.57vh;
+  margin: .6vh 0;
 `
 const NameBlock = styled.h1`
   display: inline;
@@ -37,12 +37,14 @@ const NameBlock = styled.h1`
   display: inline-block;
   background-color: ${props => props.theme.textColor};
   color: ${props => props.theme.bgColor};
-  font-family: 'Righteous', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   letter-spacing: .2vh;
-  font-size: 7.2vh;
+  font-size: 8.5vh;
 `
 const SocialBlock = styled.div`
-  margin: 1.8vh auto;
+  margin: 1vh auto;
+  position: relative;
+  left: 2px;
 `
 const SocialLink = styled.a`
   user-select: none;

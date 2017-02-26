@@ -24,7 +24,7 @@ const NavBarContainer = styled.div`
 const NavLinkContainer = styled.div`
   display: flex;
   align-items: center;
-  padding-right: 2em;
+  padding-right: 1em;
 `
 
 const NavLink = styled(Link)`
@@ -35,9 +35,10 @@ const NavLink = styled(Link)`
         ? props.theme.bgColor 
         : props.theme.textColor}
   flex: 0 0 auto;
-  margin: 0 1em;
+  margin: 0 .5em;
   text-decoration: none;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Unica One', cursive;
+  font-size: 3vh;
   
   transition: .2s ease-in-out;
   &:hover {

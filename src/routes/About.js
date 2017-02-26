@@ -39,8 +39,8 @@ class About extends Component {
           onMouseEnter={() => this.state.portraitMode || this.enlarge('bio')}
         />
         {
-          bioItems.map((item) => {
-            return <LazyLoadImage src={item.src} />
+          bioItems.map((item, i) => {
+            return <LazyLoadImage key={i} src={item.src} />
           })
         }
       </AboutContainer>
