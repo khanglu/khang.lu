@@ -16,6 +16,7 @@ const TabithaContainer = styled.div`
     path {
       fill: ${props => props.theme.textColor}
       pointer-events: all;
+      transition: .5s;
     }
     transition: .3s;
     &:hover {

@@ -37,6 +37,7 @@ const NavLink = styled(Link)`
   flex: 0 0 auto;
   margin: 0 1em;
   text-decoration: none;
+  user-select: none;
   font-family: 'Pacifico', cursive;
   
   transition: .2s ease-in-out;

@@ -18,6 +18,10 @@ const Hero = (props) => (
 const HeroBlock = styled.div`
   text-align: center;
   margin: 9em auto 4em;
+  user-select: none;
+  * {
+    transition: .5s;
+  }
 `
 const HeroHeading = styled.h2`
   color: ${props => props.theme.textColor};
