@@ -10,7 +10,7 @@ const devList = [
       "SASS, CSS Modules, styled-components, radium",
       " ",
       "WORKFLOW TOOLS:",
-      "GitHub, BitBucket, Jira, Trello",
+      "GitHub, GitFlow, Agile Development, BitBucket, Jira, Trello",
       " ",
       "DESIGN:",
       "Photoshop, Illustrator",

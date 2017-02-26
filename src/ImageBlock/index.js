@@ -32,6 +32,7 @@ const Description = styled.p`
   color: ${props => props.theme.bgColor}
   transition: .2s;
   font-size: ${props => props.portraitMode ? '4vw': '2vw'};
+  min-width: 46vw;
 `
 
 export default ImageBlock
