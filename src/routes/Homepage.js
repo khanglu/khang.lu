@@ -51,14 +51,9 @@ const Hallway = styled.div`
 `
 
 const Floor = styled.div`
-  height: 1vh;
+  height: 1.2vh;
   width: 100%;
-  background-color: #f26730;
-  
-  border-top: 2px;
-  border-top-style: outset;
-  border-color: #d1571e;
-  filter : hue-rotate(${props => props.theme.doorColor - 10}deg);
+  background-color: ${props => props.theme.textColor};
 `
 
 export default Homepage

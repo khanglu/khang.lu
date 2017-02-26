@@ -27,11 +27,12 @@ class App extends Component {
   }
 
   changeTheme () {
-    if (this.state.themeIndex === allThemes.length - 1) {
-      this.setState({themeIndex: 0})
-    } else {
-      this.setState({themeIndex: this.state.themeIndex + 1})
+    // Randomize new theme that is different from the current one
+    let newThemeIndex = this.state.themeIndex
+    while (newThemeIndex === this.state.themeIndex) {
+      newThemeIndex = Math.floor(Math.random() * allThemes.length)
     }
+    this.setState({themeIndex: newThemeIndex})
   }
 
   render () {

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import bioItems from './bioItems'
 import ImageFrame from '../ImageFrame'
+import ListItem from '../ListItem'
 
 class BioBlock extends Component {
   constructor (props) {
@@ -80,14 +81,6 @@ const List = styled.ul`
   color: ${ props => props.theme.bgColor};
   font-family: 'Fjalla One', sans-serif;
   font-size: ${props => (props.portraitMode ? '5vw' : '2vw')};
-`
-
-const ListItem = styled.li`
-  cursor: pointer;
-  ${props => props.portraitMode && 'display: inline-block; margin: 0 3vw;'}
-  ${props => props.active && !props.compact && 'font-family: Anton; font-size: 2.5vw;'}
-  ${props => props.active && props.portraitMode && 'font-family: Anton; font-size: 6vw;'}
-  transition: .2s;
 `
 
 export default BioBlock

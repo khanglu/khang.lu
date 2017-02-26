@@ -3,7 +3,7 @@ const devList = [
     name: 'tool box',
     code: [
       "/*",
-      "JavaScript:",
+      "J@VASCRIPT:",
       " - Vanilla ES6+, React and its ecosystem, Redux, Webpack, Gulp",
       "  ",
       "STYLING:",

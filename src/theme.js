@@ -1,22 +1,24 @@
-export const allThemes = [
-  /*{ // Black-Yellow
-    bgColor: '#fdf650',
-    textColor: '#231d21',
-    doorColor: 0
-  },*/
+const themes = [
   {
     bgColor: '#f9f6ef',
-    textColor: '#546d5a',
-    doorColor: 160
+    textColor: '#627a68'
   },
   {
     bgColor: '#eee',
-    textColor: '#c75757',
-    doorColor: 0
+    textColor: '#c75757'
   },
   {
     bgColor: '#fcecb1',
-    textColor: '#c56738',
-    doorColor: 17
+    textColor: '#c56738'
   },
 ]
+
+/* This is invert themes array with 2 color swapped (bgColor <=> textColor)
+const invertThemes = themes.map(
+  (theme) => {
+    return {bgColor: theme['textColor'],textColor: theme['bgColor']}
+  }
+)
+*/
+
+export const allThemes = themes //.concat(invertThemes)

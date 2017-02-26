@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import CodeFrame from '../CodeFrame'
 import devList from './devList'
+import ListItem from '../ListItem'
 
 class DevBlock extends Component {
   constructor (props) {
@@ -45,12 +46,12 @@ class DevBlock extends Component {
 // overflow-y: hidden; to handle Safari
 const DevWrapper = styled.div`
   overflow-y: hidden;
-  ${props => props.portraitMode || 'height: 100vh;'}
+  ${props => !props.portraitMode && 'height: 100vh;'}
   background: ${props => props.theme.bgColor};
   transition: .5s;
   ${props => (
       props.portraitMode 
-        ? 'margin-top: 5em;'
+        ? 'padding-top: 5em;'
         : props.compact 
           ? 'flex-basis: 25vw;'
           : 'flex-basis: 75vw;'
@@ -87,13 +88,4 @@ const List = styled.ul`
   font-family: 'Fjalla One', sans-serif;
   font-size: ${props => (props.portraitMode ? '5vw' : '2vw')};
 `
-
-const ListItem = styled.li`
-  cursor: pointer;
-  ${props => props.portraitMode && 'display: inline-block; margin: 0 3vw;'}
-  ${props => props.active && !props.compact && 'font-family: Anton; font-size: 2.5vw;'}
-  ${props => props.active && props.portraitMode && 'font-family: Anton; font-size: 6vw;'}
-  transition: .2s;
-`
-
 export default DevBlock
