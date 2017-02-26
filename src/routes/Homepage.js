@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Hero from '../Hero'
 import Corgi from '../Corgi'
 import Door from '../Door'
+import LazyLoadImage from '../LazyLoadImage'
+import CorgiGif from '../Corgi/corgi.gif'
 
 class Homepage extends Component {
   constructor() {
@@ -32,6 +34,7 @@ class Homepage extends Component {
           <Floor />
         </Hallway>
         {corgis}
+        <LazyLoadImage src={CorgiGif} />
       </div>
     )
   }

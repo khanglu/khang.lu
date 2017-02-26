@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import DevBlock from '../DevBlock'
 import BioBlock from '../BioBlock'
 import bioItems from '../BioBlock/bioItems'
+import LazyLoadImage from '../LazyLoadImage'
 
 class About extends Component {
   constructor (props) {
@@ -50,12 +51,6 @@ class About extends Component {
 const AboutContainer = styled.div`
   display: flex;
   flex-direction: ${props => props.portraitMode ? 'column' : 'row'};
-`
-
-const LazyLoadImage = styled.img`
-  position: fixed;
-  top: -1000px;
-  left: -1000px;
 `
 
 export default About
