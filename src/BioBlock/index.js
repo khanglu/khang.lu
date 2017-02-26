@@ -61,7 +61,7 @@ const BioHeading = styled.h1`
   font-family: 'Anton', sans-serif;
   margin: 2vw 0;
   position: relative;
-  left: -3px;
+  left: -4px;
 `
 
 const BioList = styled.div`
