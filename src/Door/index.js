@@ -3,8 +3,7 @@ import styled, {keyframes} from 'styled-components'
 
 const Door = (props) => (
   <DoorContainer onClick={() => props.changeTheme()}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 439.53 476.2">
-      <title>59871</title>
+    <svg viewBox="0 0 439.53 476.2">
       <g>
         <rect x="0.67" y="422.3" width="92.11" height="53.9"/>
         <rect x="346.76" y="422.3" width="92.11" height="53.9"/>
