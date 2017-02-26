@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       // Get random number between 0 and 3 to randomize theme
       themeIndex: Math.floor(Math.random() * allThemes.length),
-      isStacked: window.innerWidth/window.innerHeight < 1.4
+      portraitMode: window.innerWidth/window.innerHeight < 1.4
     }
     this.changeTheme = this.changeTheme.bind(this)
     this.handleResize = this.handleResize.bind(this)
@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   handleResize () {
-    this.setState({isStacked: window.innerWidth/window.innerHeight < 1.4})
+    this.setState({portraitMode: window.innerWidth/window.innerHeight < 1.4})
   }
 
   changeTheme () {
@@ -42,14 +42,14 @@ class App extends Component {
         <div>
             <Route exact path="/" render={() => (
               <Background>
-                <NavBar page='homepage' />
+                <NavBar changeTheme={this.changeTheme} page='homepage' />
                 <Homepage changeTheme={this.changeTheme} />
               </Background>
             )} />
             <Route path="/about" render={() => (
               <div>
-                <NavBar isStacked={this.state.isStacked} page='about' />
-                <About isStacked={this.state.isStacked} />
+                <NavBar changeTheme={this.changeTheme} portraitMode={this.state.portraitMode} page='about' />
+                <About portraitMode={this.state.portraitMode} />
               </div>
             )} />
         </div>

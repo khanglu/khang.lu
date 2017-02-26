@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import CodeBlock from '../CodeBlock'
-import codeSamples from './codeSamples'
+import devList from './devList'
 
 class DevBlock extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      compact: props.compact
+      compact: props.compact,
+      activeCodeItem: 0
     }
+  }
+
+  changeCode (index) {
+    this.setState({activeCodeItem: index})
   }
 
   render () {
@@ -18,21 +23,19 @@ class DevBlock extends Component {
         <DevContent>
           <SkillsBlock {...this.props}>
             <List {...this.props}>
-              <li>es6+ JavaScript</li>
-              <li>react</li>
-              <li>redux</li>
-              <li>webpack</li>
-              <li>npm</li>
-              <li>gulp</li>
-            </List>
-            <List {...this.props}>
-              <li>sass</li>
-              <li>css modules</li>
-              <li>styled-components</li>
-              <li>radium</li>
+              {devList.map((item, index) => (
+                <ListItem
+                  {...this.props}
+                  onClick={() => this.changeCode(index)}
+                  key={index}
+                  active={this.state.activeCodeItem === index}
+                >
+                  {item.name}
+                </ListItem>
+              ))}
             </List>
           </SkillsBlock>
-          <CodeBlock {...this.props} code={codeSamples.js} />
+          <CodeBlock {...this.props} code={devList[this.state.activeCodeItem].code} />
         </DevContent>
       </DevWrapper>
     )
@@ -40,11 +43,11 @@ class DevBlock extends Component {
 }
 
 const DevWrapper = styled.div`
-  ${props => props.isStacked || 'height: 100vh;'}
+  ${props => props.portraitMode || 'height: 100vh;'}
   background: ${props => props.theme.bgColor};
   transition: .5s;
   ${props => (
-      props.isStacked 
+      props.portraitMode 
         ? 'margin-top: 5em;'
         : props.compact 
           ? 'flex-basis: 25vw;'
@@ -53,12 +56,12 @@ const DevWrapper = styled.div`
  
 `
 const DevHeading = styled.h1`
-  text-align: ${ props => props.isStacked ? 'center' : 'right'};
-  font-size: ${ props => props.isStacked ? '20vw' : '6vw'};
+  text-align: ${ props => props.portraitMode ? 'center' : 'right'};
+  font-size: ${ props => props.portraitMode ? '20vw' : '7vw'};
   color: ${ props => props.theme.textColor};
   font-family: 'Anton', sans-serif;
-  
   margin: 2vw 0;
+  transition: .5s;
 `
 
 const DevContent = styled.div`
@@ -66,17 +69,30 @@ const DevContent = styled.div`
 `
 
 const SkillsBlock = styled.div`
-  display: ${props => (props.isStacked ? 'flex' : 'inline-block')};
-  width: ${props => (props.isStacked ? '100vw' : '30vw')};
+  vertical-align: top;
+  display: ${props => (props.portraitMode ? 'flex' : 'inline-block')};
+  width: ${props => (props.portraitMode ? '100vw' : props.compact ? '21vw' : '25vw')};
   transition: .5s;
 `
 
 const List = styled.ul`
+  ${props => props.portraitMode 
+    ? 'text-align: center; padding: 0;'
+    : 'padding-left: 3vw;'
+  }
   margin-top: 0;
   list-style: none;
   color: ${ props => props.theme.textColor};
   font-family: 'Fjalla One', sans-serif;
-  font-size: ${props => (props.isStacked ? '5vw' : '2vw')};
+  font-size: ${props => (props.portraitMode ? '5vw' : '2vw')};
+`
+
+const ListItem = styled.li`
+  cursor: pointer;
+  ${props => props.portraitMode && 'display: inline-block; margin: 0 3vw;'}
+  ${props => props.active && !props.compact && 'font-family: Anton; font-size: 2.5vw;'}
+  ${props => props.active && !props.compact && props.portraitMode && 'font-family: Anton; font-size: 6vw;'}
+  transition: .2s;
 `
 
 export default DevBlock

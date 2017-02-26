@@ -4,8 +4,8 @@ import DevBlock from '../DevBlock'
 import BioBlock from '../BioBlock'
 
 class About extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       isDevBig: true
     }
@@ -22,18 +22,18 @@ class About extends Component {
 
 
   render () {
-    const {isStacked} = this.props
+    const {portraitMode} = this.props
     return(
-      <AboutContainer isStacked={isStacked}>
+      <AboutContainer portraitMode={portraitMode}>
         <DevBlock
-          isStacked={isStacked}
+          portraitMode={portraitMode}
           compact={!this.state.isDevBig}
-          onMouseEnter={() => this.state.isStacked || this.enlarge('dev')}
+          onMouseEnter={() => this.state.portraitMode || this.enlarge('dev')}
         />
         <BioBlock
-          isStacked={isStacked}
+          portraitMode={portraitMode}
           compact={this.state.isDevBig}
-          onMouseEnter={() => this.state.isStacked || this.enlarge('bio')}
+          onMouseEnter={() => this.state.portraitMode || this.enlarge('bio')}
         />
       </AboutContainer>
     )
@@ -42,7 +42,7 @@ class About extends Component {
 
 const AboutContainer = styled.div`
   display: flex;
-  flex-direction: ${props => props.isStacked ? 'column' : 'row'};
+  flex-direction: ${props => props.portraitMode ? 'column' : 'row'};
 `
 
 export default About

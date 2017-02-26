@@ -5,15 +5,16 @@ import Tabitha from './Tabitha'
 
 const NavBar = (props) => (
   <NavBarContainer {...props}>
-    <Tabitha />
+    <Tabitha changeTheme={props.changeTheme} />
     <NavLinkContainer>
+      <NavLink {...props} to="/">Home</NavLink>
       <NavLink {...props} to="about">About</NavLink>
-      <NavLink {...props} to="about">My Work</NavLink>
     </NavLinkContainer>
   </NavBarContainer>
 )
 
 const NavBarContainer = styled.div`
+  z-index: 69;
   position: absolute;
   top: 0;
   width: 100%;
@@ -28,7 +29,7 @@ const NavLinkContainer = styled.div`
 
 const NavLink = styled(Link)`
   color: ${props => 
-    props.isStacked 
+    props.portraitMode 
       ? props.theme.textColor 
       : props.page === 'about' 
         ? props.theme.bgColor 
