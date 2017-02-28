@@ -73,8 +73,8 @@ const BioList = styled.div`
 
 const List = styled.ul`
   ${props => props.portraitMode
-  ? 'text-align: center; padding: 0;'
-  : 'padding-left: 3vw;'
+    ? 'text-align: center; padding: 0;'
+    : 'padding-left: 3vw;'
   }
   margin-top: 0;
   list-style: none;

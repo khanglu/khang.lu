@@ -30,4 +30,4 @@ const CorgiGif = styled.img`
 	animation-timing-function: linear;
 `
 
-export default Corgi;
+export default Corgi

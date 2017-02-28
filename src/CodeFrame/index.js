@@ -23,16 +23,14 @@ const CodeWrapper = styled.div`
   width: ${props => (props.portraitMode ? '90vw' : props.compact ? 0 : '46vw')};
   transition: .5s;
 `
-
 const CodeContainer = styled.div`
   padding: 1vw 0;
   width: 100%;
-  word-wrap:break-word;
+  word-wrap: break-word;
   background: ${props => props.theme.textColor};
   border-radius: 2vw; 
   transition: .5s;
 `
-
 const CodeLine = styled.div`
   color: ${props => props.theme.bgColor};
   padding: 0 1vw;

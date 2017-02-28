@@ -21,7 +21,6 @@ class DevBlock extends Component {
     return (
       <DevWrapper {...this.props} >
         <DevHeading {...this.props}>DEV</DevHeading>
-        <DevContent>
           <SkillsBlock {...this.props}>
             <List {...this.props}>
               {devList.map((item, index) => (
@@ -37,7 +36,6 @@ class DevBlock extends Component {
             </List>
           </SkillsBlock>
           <CodeFrame {...this.props} code={devList[this.state.activeCodeItem].code} />
-        </DevContent>
       </DevWrapper>
     )
   }
@@ -65,18 +63,12 @@ const DevHeading = styled.h1`
   margin: 2vw 0;
   transition: .5s;
 `
-
-const DevContent = styled.div`
-  
-`
-
 const SkillsBlock = styled.div`
   vertical-align: top;
   display: ${props => (props.portraitMode ? 'flex' : 'inline-block')};
   width: ${props => (props.portraitMode ? '100vw' : props.compact ? '21vw' : '25vw')};
   transition: .5s;
 `
-
 const List = styled.ul`
   ${props => props.portraitMode 
     ? 'text-align: center; padding: 0;'
