@@ -26,7 +26,7 @@ class DevBlock extends Component {
               {devList.map((item, index) => (
                 <ListItem
                   {...this.props}
-                  onClick={() => this.changeCode(index)}
+                  onMouseOver={() => this.changeCode(index)}
                   key={index}
                   active={this.state.activeCodeItem === index}
                 >
@@ -57,10 +57,10 @@ const DevWrapper = styled.div`
 `
 const DevHeading = styled.h1`
   text-align: ${ props => props.portraitMode ? 'center' : 'right'};
-  font-size: ${ props => props.portraitMode ? '20vw' : '7vw'};
+  font-size: ${ props => props.portraitMode ? '20vw' : props.compact ? '8vw' : '10vw'};
   color: ${ props => props.theme.textColor};
   font-family: 'Anton', sans-serif;
-  margin: 2vw 0;
+  margin: ${props => props.compact ? '2.5vw' : '2vw'} 0 4vw;
   transition: .5s;
 `
 const SkillsBlock = styled.div`

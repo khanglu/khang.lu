@@ -27,7 +27,7 @@ class BioBlock extends Component {
               {bioItems.map((item, index) => (
                 <ListItem
                   {...this.props}
-                  onClick={() => this.changeImage(index)}
+                  onMouseOver={() => this.changeImage(index)}
                   key={index}
                   active={this.state.activeImage === index}
                 >
@@ -56,12 +56,13 @@ const BioWrapper = styled.div`
 `
 const BioHeading = styled.h1`
   ${ props => props.portraitMode && 'text-align: center'};
-  font-size: ${ props => props.portraitMode ? '20vw' : '7vw'};
+  font-size: ${ props => props.portraitMode ? '20vw' : props.compact ? '8vw' : '10vw'};
   color: ${ props => props.theme.bgColor};
   font-family: 'Anton', sans-serif;
-  margin: 2vw 0;
+  margin: ${props => props.compact ? '2.5vw' : '2vw'} 0 4vw;
   position: relative;
   left: -4px;
+  transition: .5s;
 `
 
 const BioList = styled.div`
