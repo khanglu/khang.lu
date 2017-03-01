@@ -59,7 +59,7 @@ const BioHeading = styled.h1`
   font-size: ${ props => props.portraitMode ? '20vw' : props.compact ? '8vw' : '10vw'};
   color: ${ props => props.theme.bgColor};
   font-family: 'Anton', sans-serif;
-  margin: ${props => props.compact ? '2.5vw' : '2vw'} 0 4vw;
+  margin: ${props => props.compact ? '2.5vw' : '2vw'} 0 3vw;
   position: relative;
   left: -4px;
   transition: .5s;

@@ -60,7 +60,7 @@ const DevHeading = styled.h1`
   font-size: ${ props => props.portraitMode ? '20vw' : props.compact ? '8vw' : '10vw'};
   color: ${ props => props.theme.textColor};
   font-family: 'Anton', sans-serif;
-  margin: ${props => props.compact ? '2.5vw' : '2vw'} 0 4vw;
+  margin: ${props => props.compact ? '2.5vw' : '2vw'} 0 3vw;
   transition: .5s;
 `
 const SkillsBlock = styled.div`
