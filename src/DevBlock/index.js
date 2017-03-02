@@ -65,7 +65,7 @@ const DevHeading = styled.h1`
   font-family: 'Anton', sans-serif;
   margin: ${props => props.compact ? '2.5vw 0 3vw' : '2vw 0 .5vw'};
   left: 0.04em;
-  transition: ${transitionSettings};
+  transition: ${transitionSettings} ease-out;
 `
 const SkillsBlock = styled.div`
   vertical-align: top;
