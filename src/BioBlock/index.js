@@ -28,11 +28,10 @@ class BioBlock extends Component {
               {bioItems.map((item, index) => (
                 <ListItem
                   {...this.props}
-                  onMouseOver={() => this.changeImage(index)}
                   key={index}
                   active={this.state.activeImage === index}
                 >
-                  <span onMouseOver={() => this.changeCode(index)}>
+                  <span onMouseOver={() => this.changeImage(index)}>
                     {item.name}
                   </span>
                 </ListItem>

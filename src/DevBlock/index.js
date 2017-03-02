@@ -12,6 +12,7 @@ class DevBlock extends Component {
       compact: props.compact,
       activeCodeItem: 0
     }
+    this.changeCode = this.changeCode.bind(this)
   }
 
   changeCode (index) {

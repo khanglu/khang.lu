@@ -31,12 +31,12 @@ class About extends Component {
         <DevBlock
           portraitMode={portraitMode}
           compact={!this.state.isDevBig}
-          onMouseEnter={() => this.state.portraitMode || this.enlarge('dev')}
+          onMouseOver={() => portraitMode || this.enlarge('dev')}
         />
         <BioBlock
           portraitMode={portraitMode}
           compact={this.state.isDevBig}
-          onMouseEnter={() => this.state.portraitMode || this.enlarge('bio')}
+          onMouseOver={() => portraitMode || this.enlarge('bio')}
         />
         {
           bioItems.map((item, i) => {
