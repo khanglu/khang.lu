@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import bioItems from './bioItems'
 import ImageFrame from '../ImageFrame'
 import ListItem from '../ListItem'
+import {transitionSettings} from '../theme'
 
 class BioBlock extends Component {
   constructor (props) {
@@ -31,7 +32,9 @@ class BioBlock extends Component {
                   key={index}
                   active={this.state.activeImage === index}
                 >
-                  {item.name}
+                  <span onMouseOver={() => this.changeCode(index)}>
+                    {item.name}
+                  </span>
                 </ListItem>
               ))}
             </List>
@@ -51,7 +54,7 @@ const BioWrapper = styled.div`
       : 'flex-basis: 75vw;'
   )}
   background: ${props => props.theme.textColor};
-  transition: .5s;
+  transition: ${transitionSettings};
   overflow: hidden;
 `
 const BioHeading = styled.h1`
@@ -59,17 +62,17 @@ const BioHeading = styled.h1`
   font-size: ${ props => props.portraitMode ? '20vw' : props.compact ? '8vw' : '10vw'};
   color: ${ props => props.theme.bgColor};
   font-family: 'Anton', sans-serif;
-  margin: ${props => props.compact ? '2.5vw' : '2vw'} 0 3vw;
+  margin: ${props => props.compact ? '2.5vw 0 3vw' : '2vw 0 .5vw'};
   position: relative;
-  left: -4px;
-  transition: .5s;
+  right: 0.04em;
+  transition: ${transitionSettings};
 `
 
 const BioList = styled.div`
   vertical-align: top;
   display: ${props => (props.portraitMode ? 'flex' : 'inline-block')};
   width: ${props => (props.portraitMode ? '100vw' : props.compact ? '21vw' : '25vw')};
-  transition: .5s;
+  transition: ${transitionSettings};
 `
 
 const List = styled.ul`

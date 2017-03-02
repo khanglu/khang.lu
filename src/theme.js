@@ -13,6 +13,7 @@ const themes = [
   },
 ]
 
+
 /* This is invert themes array with 2 color swapped (bgColor <=> textColor)
 const invertThemes = themes.map(
   (theme) => {
@@ -20,5 +21,5 @@ const invertThemes = themes.map(
   }
 )
 */
-
+export const transitionSettings = '.7s'
 export const allThemes = themes //.concat(invertThemes)

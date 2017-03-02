@@ -9,7 +9,7 @@ const bioItems = [
   {
     name: 'pokémon',
     src: lillie,
-    desc: 'Wise word from Lillie'
+    desc: 'Wise words from Lillie'
   },
   {
     name: 'hearthstone',

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import CodeFrame from '../CodeFrame'
 import devList from './devList'
 import ListItem from '../ListItem'
+import {transitionSettings} from '../theme'
 
 class DevBlock extends Component {
   constructor (props) {
@@ -26,11 +27,12 @@ class DevBlock extends Component {
               {devList.map((item, index) => (
                 <ListItem
                   {...this.props}
-                  onMouseOver={() => this.changeCode(index)}
                   key={index}
                   active={this.state.activeCodeItem === index}
                 >
-                  {item.name}
+                  <span onMouseOver={() => this.changeCode(index)}>
+                    {item.name}
+                  </span>
                 </ListItem>
               ))}
             </List>
@@ -46,7 +48,7 @@ const DevWrapper = styled.div`
   overflow-y: hidden;
   ${props => !props.portraitMode && 'height: 100vh;'}
   background: ${props => props.theme.bgColor};
-  transition: .5s;
+  transition: ${transitionSettings};
   ${props => (
       props.portraitMode 
         ? 'padding-top: 5em;'
@@ -60,14 +62,15 @@ const DevHeading = styled.h1`
   font-size: ${ props => props.portraitMode ? '20vw' : props.compact ? '8vw' : '10vw'};
   color: ${ props => props.theme.textColor};
   font-family: 'Anton', sans-serif;
-  margin: ${props => props.compact ? '2.5vw' : '2vw'} 0 3vw;
-  transition: .5s;
+  margin: ${props => props.compact ? '2.5vw 0 3vw' : '2vw 0 .5vw'};
+  left: 0.04em;
+  transition: ${transitionSettings};
 `
 const SkillsBlock = styled.div`
   vertical-align: top;
   display: ${props => (props.portraitMode ? 'flex' : 'inline-block')};
   width: ${props => (props.portraitMode ? '100vw' : props.compact ? '21vw' : '25vw')};
-  transition: .5s;
+  transition: ${transitionSettings};
 `
 const List = styled.ul`
   ${props => props.portraitMode 

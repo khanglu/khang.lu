@@ -7,7 +7,7 @@ const devList = [
       " - Vanilla ES6+, React and its ecosystem, Redux, Webpack, Gulp",
       "  ",
       "STYLING:",
-      " - SASS, CSS Modules, styled-components, radium",
+      " - Responsive Design, SASS, CSS Modules, styled-components, radium",
       " ",
       "WORKFLOW TOOLS:",
       " - GitHub, GitFlow, Agile Development, BitBucket, Jira, Trello",

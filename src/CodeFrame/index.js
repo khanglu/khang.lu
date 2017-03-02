@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {transitionSettings} from '../theme'
 
 const CodeFrame = (props) => {
   return (
@@ -21,7 +22,7 @@ const CodeWrapper = styled.div`
   ${props => props.portraitMode && 'padding: 5vw;'}
   display: inline-block;
   width: ${props => (props.portraitMode ? '90vw' : props.compact ? 0 : '46vw')};
-  transition: .5s;
+  transition: ${transitionSettings};
 `
 const CodeContainer = styled.div`
   padding: 1vw 0;
@@ -29,7 +30,7 @@ const CodeContainer = styled.div`
   word-wrap: break-word;
   background: ${props => props.theme.textColor};
   border-radius: 2vw; 
-  transition: .5s;
+  transition: ${transitionSettings};
 `
 const CodeLine = styled.div`
   color: ${props => props.theme.bgColor};

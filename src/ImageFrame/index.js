@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {transitionSettings} from '../theme'
 
 const ImageFrame = (props) => {
   return (
@@ -17,7 +18,7 @@ const ImageContainer = styled.div`
   width: ${props => (props.portraitMode ? '100vw' : props.compact ? 0 : '46vw')};
   overflow: hidden;
   position: relative;
-  transition: .5s;
+  transition: ${transitionSettings};
 `
 const Image = styled.img`
   width: ${props => (props.portraitMode ? '100vw' : '46vw')};
