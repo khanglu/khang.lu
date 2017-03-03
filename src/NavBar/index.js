@@ -29,7 +29,7 @@ const NavLinkContainer = styled.div`
 
 const NavLink = styled(Link)`
   color: ${props => 
-    props.portraitMode 
+    props.isPortraitMode 
       ? props.theme.textColor 
       : props.page === 'about' 
         ? props.theme.bgColor 

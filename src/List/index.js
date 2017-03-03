@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const List = styled.ul`
-  ${props => props.portraitMode
+  ${props => props.isPortraitMode
     ? 'text-align: center; padding: 0;'
     : 'padding-left: 3vw;'
   }
@@ -9,7 +9,7 @@ const List = styled.ul`
   list-style: none;
   color: ${ props => props.name === 'bio' ? props.theme.bgColor : props.theme.textColor};
   font-family: 'Fjalla One', sans-serif;
-  font-size: ${props => (props.portraitMode ? '5vw' : '2vw')};
+  font-size: ${props => (props.isPortraitMode ? '5vw' : '2vw')};
 `
 
 export default List

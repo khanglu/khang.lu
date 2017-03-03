@@ -15,23 +15,23 @@ const ImageFrame = (props) => {
 
 const ImageContainer = styled.div`
   display: inline-block;
-  width: ${props => (props.portraitMode ? '100vw' : props.compact ? 0 : '46vw')};
+  width: ${props => (props.isPortraitMode ? '100vw' : props.isCompact ? 0 : '46vw')};
   overflow: hidden;
   position: relative;
   transition: ${transitionSettings};
 `
 const Image = styled.img`
-  width: ${props => (props.portraitMode ? '100vw' : '46vw')};
-  border-radius: ${props => props.portraitMode || '2vw'}; 
+  width: ${props => (props.isPortraitMode ? '100vw' : '46vw')};
+  border-radius: ${props => props.isPortraitMode || '2vw'}; 
 `
 
 const Description = styled.p`
   font-family: 'Fjalla One', sans-serif;
   text-align: center;
-  ${props => !props.portraitMode && props.compact && 'opacity: 0;'}
+  ${props => !props.isPortraitMode && props.isCompact && 'opacity: 0;'}
   color: ${props => props.theme.bgColor}
   transition: .2s;
-  font-size: ${props => props.portraitMode ? '3vw': '1.3vw'};
+  font-size: ${props => props.isPortraitMode ? '3vw': '1.3vw'};
   min-width: 46vw;
 `
 

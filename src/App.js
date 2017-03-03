@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       // Get random number between 0 and 3 to randomize theme
       themeIndex: Math.floor(Math.random() * allThemes.length),
-      portraitMode: window.innerWidth/window.innerHeight < 1.3
+      isPortraitMode: window.innerWidth/window.innerHeight < 1.3
     }
     this.changeTheme = this.changeTheme.bind(this)
     this.handleResize = this.handleResize.bind(this)
@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   handleResize () {
-    this.setState({portraitMode: window.innerWidth/window.innerHeight < 1.3})
+    this.setState({isPortraitMode: window.innerWidth/window.innerHeight < 1.3})
   }
 
   changeTheme () {
@@ -49,8 +49,8 @@ class App extends Component {
               )} />
               <Route path="/about" render={() => (
                 <div>
-                  <NavBar changeTheme={this.changeTheme} portraitMode={this.state.portraitMode} page='about' />
-                  <About portraitMode={this.state.portraitMode} />
+                  <NavBar changeTheme={this.changeTheme} isPortraitMode={this.state.isPortraitMode} page='about' />
+                  <About isPortraitMode={this.state.isPortraitMode} />
                 </div>
               )} />
           </div>

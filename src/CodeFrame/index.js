@@ -19,9 +19,9 @@ const CodeFrame = (props) => {
 }
 
 const CodeWrapper = styled.div`
-  ${props => props.portraitMode && 'padding: 5vw;'}
+  ${props => props.isPortraitMode && 'padding: 5vw;'}
   display: inline-block;
-  width: ${props => (props.portraitMode ? '90vw' : props.compact ? 0 : '46vw')};
+  width: ${props => (props.isPortraitMode ? '90vw' : props.isCompact ? 0 : '46vw')};
   transition: ${transitionSettings};
 `
 const CodeContainer = styled.div`
@@ -35,7 +35,7 @@ const CodeContainer = styled.div`
 const CodeLine = styled.div`
   color: ${props => props.theme.bgColor};
   padding: 0 1vw;
-  font-size: ${props => (props.portraitMode ? '2vw' : '1vw')};
+  font-size: ${props => (props.isPortraitMode ? '2vw' : '1vw')};
   pre {
     margin: .4vw;
   }

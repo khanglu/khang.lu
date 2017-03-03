@@ -24,19 +24,19 @@ class About extends Component {
 
 
   render () {
-    const {portraitMode} = this.props
+    const {isPortraitMode} = this.props
 
     return(
-      <AboutContainer portraitMode={portraitMode}>
+      <AboutContainer isPortraitMode={isPortraitMode}>
         <DevBlock
-          portraitMode={portraitMode}
-          compact={!this.state.isDevBig}
-          onMouseOver={() => portraitMode || this.enlarge('dev')}
+          isPortraitMode={isPortraitMode}
+          isCompact={!this.state.isDevBig}
+          enlarge={block => isPortraitMode || this.enlarge(block)}
         />
         <BioBlock
-          portraitMode={portraitMode}
-          compact={this.state.isDevBig}
-          onMouseOver={() => portraitMode || this.enlarge('bio')}
+          isPortraitMode={isPortraitMode}
+          isCompact={this.state.isDevBig}
+          enlarge={block => isPortraitMode || this.enlarge(block)}
         />
         {
           bioItems.map((item, i) => {
@@ -51,7 +51,7 @@ class About extends Component {
 const AboutContainer = styled.div`
   display: flex;
   ${props => (
-    props.portraitMode
+    props.isPortraitMode
       ? 'padding-top: 5em; flex-direction: column; background-color:' + props.theme.bgColor + ';'
       : 'flex-direction: row;'
   )}
