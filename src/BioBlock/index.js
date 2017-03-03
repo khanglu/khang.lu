@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import bioItems from './bioItems'
 import ImageFrame from '../ImageFrame'
+import List from '../List'
 import ListItem from '../ListItem'
 import {transitionSettings} from '../theme'
 
@@ -24,7 +25,7 @@ class BioBlock extends Component {
       <BioWrapper {...this.props} >
         <BioHeading {...this.props}>BIO</BioHeading>
           <BioList {...this.props} >
-            <List {...this.props} >
+            <List name='bio' {...this.props}>
               {bioItems.map((item, index) => (
                 <ListItem
                   {...this.props}
@@ -45,16 +46,18 @@ class BioBlock extends Component {
 }
 
 const BioWrapper = styled.div`
-  ${props => props.portraitMode || 'height: 100vh;'}
-  ${props => (
-    props.portraitMode ||
-    props.compact
-      ? 'flex-basis: 25vw;'
-      : 'flex-basis: 75vw;'
-  )}
+  ${props => {
+    if (!props.portraitMode) {
+      if(props.compact) {
+        return 'flex-basis: 25vw; height: 100vh;'
+      } else {
+        return 'flex-basis: 75vw; height: 100vh;'
+      }
+    }
+  }}
   background: ${props => props.theme.textColor};
   transition: ${transitionSettings};
-  overflow: hidden;
+  overflow-y: hidden;
 `
 const BioHeading = styled.h1`
   ${ props => props.portraitMode && 'text-align: center'};
@@ -66,24 +69,11 @@ const BioHeading = styled.h1`
   right: 0.04em;
   transition: ${transitionSettings} ease-out;
 `
-
 const BioList = styled.div`
   vertical-align: top;
   display: ${props => (props.portraitMode ? 'flex' : 'inline-block')};
   width: ${props => (props.portraitMode ? '100vw' : props.compact ? '21vw' : '25vw')};
   transition: ${transitionSettings};
-`
-
-const List = styled.ul`
-  ${props => props.portraitMode
-    ? 'text-align: center; padding: 0;'
-    : 'padding-left: 3vw;'
-  }
-  margin-top: 0;
-  list-style: none;
-  color: ${ props => props.theme.bgColor};
-  font-family: 'Fjalla One', sans-serif;
-  font-size: ${props => (props.portraitMode ? '5vw' : '2vw')};
 `
 
 export default BioBlock

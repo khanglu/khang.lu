@@ -1,9 +1,9 @@
-import hearthstonePavel from './hearthstone-pavel.jpg'
-import pokerHand from './poker-hand.jpg'
-import motorbike from './motorbike.jpg'
-import lego from './lego.jpg'
-import arsenal from './arsenal.jpg'
-import lillie from './lillie.jpg'
+import hearthstonePavel from '../../staticAssets/hearthstone-pavel.jpg'
+import pokerHand from '../../staticAssets/poker-hand.jpg'
+import motorbike from '../../staticAssets/motorbike.jpg'
+import lego from '../../staticAssets/lego.jpg'
+import arsenal from '../../staticAssets/arsenal.jpg'
+import lillie from '../../staticAssets/lillie.jpg'
 
 const bioItems = [
   {

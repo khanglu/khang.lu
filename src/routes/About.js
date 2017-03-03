@@ -50,7 +50,11 @@ class About extends Component {
 
 const AboutContainer = styled.div`
   display: flex;
-  flex-direction: ${props => props.portraitMode ? 'column' : 'row'};
+  ${props => (
+    props.portraitMode
+      ? 'padding-top: 5em; flex-direction: column; background-color:' + props.theme.bgColor + ';'
+      : 'flex-direction: row;'
+  )}
 `
 
 export default About

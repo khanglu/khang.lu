@@ -4,7 +4,7 @@ import Hero from '../Hero'
 import Corgi from '../Corgi'
 import Door from '../Door'
 import LazyLoadImage from '../LazyLoadImage'
-import CorgiGif from '../Corgi/corgi.gif'
+import CorgiGif from '../../staticAssets/corgi.gif'
 
 class Homepage extends Component {
   constructor() {

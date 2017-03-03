@@ -13,7 +13,6 @@ const themes = [
   },
 ]
 
-
 /* This is invert themes array with 2 color swapped (bgColor <=> textColor)
 const invertThemes = themes.map(
   (theme) => {

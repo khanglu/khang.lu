@@ -36,7 +36,6 @@ const CodeLine = styled.div`
   color: ${props => props.theme.bgColor};
   padding: 0 1vw;
   font-size: ${props => (props.portraitMode ? '2vw' : '1vw')};
-  
   pre {
     margin: .4vw;
   }

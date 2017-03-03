@@ -1,4 +1,4 @@
-const devList = [
+const devItems = [
   {
     name: 'tool box',
     code: [
@@ -29,7 +29,7 @@ const devList = [
     "      <Link href={linkedIn}>LinkedIn</Link>",
     "      <Link href={mail}>Email</Link>",
     "      <Link href={facebook}>Facebook</Link>",
-    "      <Link onClick={()=>props.addCorgi()}>Add a Corgi</Link>",
+    "      <Link onClick={() => props.addCorgi()}>Add a Corgi</Link>",
     "    </SocialBlock>",
     "  </HeroBlock>",
     ")",
@@ -148,4 +148,4 @@ const devList = [
 
 ]
 
-export default devList
+export default devItems

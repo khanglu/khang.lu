@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import CodeFrame from '../CodeFrame'
-import devList from './devList'
+import devItems from './devItems'
+import List from '../List'
 import ListItem from '../ListItem'
 import {transitionSettings} from '../theme'
 
@@ -24,8 +25,8 @@ class DevBlock extends Component {
       <DevWrapper {...this.props} >
         <DevHeading {...this.props}>DEV</DevHeading>
           <SkillsBlock {...this.props}>
-            <List {...this.props}>
-              {devList.map((item, index) => (
+            <List color='dev' {...this.props}>
+              {devItems.map((item, index) => (
                 <ListItem
                   {...this.props}
                   key={index}
@@ -38,7 +39,7 @@ class DevBlock extends Component {
               ))}
             </List>
           </SkillsBlock>
-          <CodeFrame {...this.props} code={devList[this.state.activeCodeItem].code} />
+          <CodeFrame {...this.props} code={devItems[this.state.activeCodeItem].code} />
       </DevWrapper>
     )
   }
@@ -46,17 +47,18 @@ class DevBlock extends Component {
 
 // overflow-y: hidden; to handle Safari
 const DevWrapper = styled.div`
-  overflow-y: hidden;
-  ${props => !props.portraitMode && 'height: 100vh;'}
+  ${props => {
+    if (!props.portraitMode) {
+      if(props.compact) {
+        return 'flex-basis: 25vw; height: 100vh;'
+      } else {
+        return 'flex-basis: 75vw; height: 100vh;'
+      }
+    }
+  }}
   background: ${props => props.theme.bgColor};
   transition: ${transitionSettings};
-  ${props => (
-      props.portraitMode 
-        ? 'padding-top: 5em;'
-        : props.compact 
-          ? 'flex-basis: 25vw;'
-          : 'flex-basis: 75vw;'
-  )}
+  overflow-y: hidden;
 `
 const DevHeading = styled.h1`
   text-align: ${ props => props.portraitMode ? 'center' : 'right'};
@@ -73,15 +75,5 @@ const SkillsBlock = styled.div`
   width: ${props => (props.portraitMode ? '100vw' : props.compact ? '21vw' : '25vw')};
   transition: ${transitionSettings};
 `
-const List = styled.ul`
-  ${props => props.portraitMode 
-    ? 'text-align: center; padding: 0;'
-    : 'padding-left: 3vw;'
-  }
-  margin-top: 0;
-  list-style: none;
-  color: ${ props => props.theme.textColor};
-  font-family: 'Fjalla One', sans-serif;
-  font-size: ${props => (props.portraitMode ? '5vw' : '2vw')};
-`
+
 export default DevBlock

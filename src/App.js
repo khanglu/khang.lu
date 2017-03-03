@@ -39,22 +39,22 @@ class App extends Component {
     const {themeIndex} = this.state
     return (
       <ThemeProvider theme={allThemes[themeIndex]}>
-      <BrowserRouter>
-        <div>
-            <Route exact path="/" render={() => (
-              <Background>
-                <NavBar changeTheme={this.changeTheme} page='homepage' />
-                <Homepage changeTheme={this.changeTheme} />
-              </Background>
-            )} />
-            <Route path="/about" render={() => (
-              <div>
-                <NavBar changeTheme={this.changeTheme} portraitMode={this.state.portraitMode} page='about' />
-                <About portraitMode={this.state.portraitMode} />
-              </div>
-            )} />
-        </div>
-      </BrowserRouter>
+        <BrowserRouter>
+          <div>
+              <Route exact path="/" render={() => (
+                <Background>
+                  <NavBar changeTheme={this.changeTheme} page='homepage' />
+                  <Homepage changeTheme={this.changeTheme} />
+                </Background>
+              )} />
+              <Route path="/about" render={() => (
+                <div>
+                  <NavBar changeTheme={this.changeTheme} portraitMode={this.state.portraitMode} page='about' />
+                  <About portraitMode={this.state.portraitMode} />
+                </div>
+              )} />
+          </div>
+        </BrowserRouter>
       </ThemeProvider>
     )
   }

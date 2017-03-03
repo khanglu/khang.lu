@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
-import corgi from './corgi.gif'
+import corgi from '../../staticAssets/corgi.gif'
 
 const Corgi = () => (
   <CorgiGif src={corgi} />
@@ -21,7 +21,6 @@ const CorgiGif = styled.img`
   z-index: 99;
   user-select: none;
   pointer-events: none;
-  
   display: inline;
   position: fixed;
   bottom: -4vh;
