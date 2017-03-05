@@ -34,7 +34,11 @@ class DevBlock extends Component {
                 key={index}
                 active={this.state.activeCodeItem === index}
               >
-                <span onMouseOver={() => this.changeCode(index)}>
+                <span
+                  tabIndex={index + 1}
+                  onFocus={() => this.changeCode(index)}
+                  onMouseOver={() => this.changeCode(index)}
+                >
                   {item.name}
                 </span>
               </ListItem>

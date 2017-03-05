@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Tabitha from './Tabitha'
 
 const NavBar = (props) => (
   <NavBarContainer {...props}>
     <Tabitha changeTheme={props.changeTheme} />
     <NavLinkContainer>
-      <NavLink {...props} to="/">Home</NavLink>
-      <NavLink {...props} to="about">About</NavLink>
+      <NavBarLink {...props} to="/" exact activeClassName="active">Home</NavBarLink>
+      <NavBarLink {...props} to="/about" activeClassName="active">About</NavBarLink>
     </NavLinkContainer>
   </NavBarContainer>
 )
@@ -26,8 +26,7 @@ const NavLinkContainer = styled.div`
   align-items: center;
   padding-right: 1em;
 `
-
-const NavLink = styled(Link)`
+const NavBarLink = styled(NavLink)`
   color: ${props => 
     props.isPortraitMode 
       ? props.theme.textColor 
@@ -39,10 +38,25 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-family: 'Unica One', cursive;
   font-size: 3vh;
-  
   transition: .2s ease-in-out;
   &:hover {
     transform: scale(1.1);
+  }
+  &.active {
+    padding: 0 .5vh;
+    border-radius: .3vh;
+    color: ${props =>
+      props.isPortraitMode
+        ? props.theme.bgColor
+        : props.page === 'about'
+          ? props.theme.textColor
+          : props.theme.bgColor}
+    background-color: ${props =>
+      props.isPortraitMode
+        ? props.theme.textColor
+        : props.page === 'about'
+          ? props.theme.bgColor
+          : props.theme.textColor}
   }
 `
 

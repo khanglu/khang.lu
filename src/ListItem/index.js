@@ -7,5 +7,8 @@ const ListItem = styled.li`
   ${props => props.active && !props.isCompact && 'font-family: Anton; font-size: 2.5vw;'}
   ${props => props.active && props.isPortraitMode && 'font-family: Anton; font-size: 6vw;'}
   transition: .2s;
+  span:focus {
+    outline: none;
+  }
 `
 export default ListItem

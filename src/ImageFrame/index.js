@@ -22,7 +22,7 @@ const ImageContainer = styled.div`
 `
 const Image = styled.img`
   width: ${props => (props.isPortraitMode ? '100vw' : '46vw')};
-  border-radius: ${props => props.isPortraitMode || '2vw'}; 
+  border-radius: ${props => props.isPortraitMode || '2vh'}; 
 `
 
 const Description = styled.p`

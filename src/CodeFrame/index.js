@@ -29,7 +29,7 @@ const CodeContainer = styled.div`
   width: 100%;
   word-wrap: break-word;
   background: ${props => props.theme.textColor};
-  border-radius: 2vw; 
+  border-radius: 2vh; 
   transition: ${transitionSettings};
 `
 const CodeLine = styled.div`

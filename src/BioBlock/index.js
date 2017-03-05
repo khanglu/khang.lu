@@ -5,6 +5,7 @@ import ImageFrame from '../ImageFrame'
 import List from '../List'
 import ListItem from '../ListItem'
 import {transitionSettings} from '../theme'
+import devItems from '../DevBlock/devItems'
 
 class BioBlock extends Component {
   constructor (props) {
@@ -34,7 +35,10 @@ class BioBlock extends Component {
                   key={index}
                   active={this.state.activeImage === index}
                 >
-                  <span onMouseOver={() => this.changeImage(index)}>
+                  <span tabIndex={devItems.length + index + 1}
+                    onFocus={() => this.changeImage(index)}
+                    onMouseOver={() => this.changeImage(index)}
+                  >
                     {item.name}
                   </span>
                 </ListItem>

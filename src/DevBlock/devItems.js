@@ -92,7 +92,7 @@ const devItems = [
     code: [
       "// NOT SURE IF I'LL EVER USE SASS AGAIN",
       " ",
-      "@mixin linx ($link, $visit, $hover, $active) {",
+      "@mixin link ($link, $visit, $hover, $active) {",
       "  a {",
       "    color: $link;",
       "    &:visited {",
