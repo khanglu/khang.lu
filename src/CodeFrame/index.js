@@ -7,9 +7,9 @@ const CodeFrame = (props) => {
     <CodeWrapper {...props}>
       <CodeContainer {...props}>
         {props.code.map((line, index) => {
-          let indexText = index;
+          let indexText = index + 1;
           if (index < 10) {
-            indexText = index + ' ';
+            indexText = index + 1 + ' ';
           }
           return <CodeLine {...props} key={index}><pre>{indexText + "    " + line}</pre></CodeLine>
         })}

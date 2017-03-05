@@ -5,34 +5,61 @@ const devItems = [
       "/*",
       "J@VASCRIPT:",
       " - Vanilla ES6+, React and its ecosystem, Redux, Webpack, Gulp",
-      "  ",
+      "",
       "STYLING:",
       " - Responsive Design, SASS, CSS Modules, styled-components, radium",
-      " ",
+      "",
       "WORKFLOW TOOLS:",
       " - GitHub, GitFlow, Agile Development, BitBucket, Jira, Trello",
-      " ",
+      "",
       "DESIGN:",
       " - Photoshop, Illustrator",
-      "*/"
+      "*/",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    name: 'responsive?',
+    code: [
+      "This page is responsive, not just based on browser's width.",
+      " ",
+      "It works regardless of device, OS, portrait or landscape mode.",
+      " ",
+      "All modern browsers supported.",
+      " ",
+      "I'm not sure about IE though.",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ]
   },
   {
     name: 'react',
     code: [
-    "const Hero = (props) => (",
-    "  <HeroBlock>",
-    "    <HeroHeading tag=\"h1\">Front End Developer</HeroHeading>",
-    "    <NameBlock>Khang</NameBlock>",
-    "    <NameBlock>Lu</NameBlock>",
-    "    <SocialBlock>",
-    "      <Link href={linkedIn}>LinkedIn</Link>",
-    "      <Link href={mail}>Email</Link>",
-    "      <Link href={facebook}>Facebook</Link>",
-    "      <Link onClick={() => props.addCorgi()}>Add a Corgi</Link>",
-    "    </SocialBlock>",
-    "  </HeroBlock>",
-    ")",
+      "const Hero = (props) => (",
+      "  <HeroBlock>",
+      "    <HeroHeading tag=\"h1\">Front End Developer</HeroHeading>",
+      "    <NameBlock>Khang</NameBlock>",
+      "    <NameBlock>Lu</NameBlock>",
+      "    <SocialBlock>",
+      "      <Link href={linkedIn}>LinkedIn</Link>",
+      "      <Link href={mail}>Email</Link>",
+      "      <Link href={facebook}>Facebook</Link>",
+      "      <Link onClick={() => props.addCorgi()}>Add a Corgi</Link>",
+      "    </SocialBlock>",
+      "  </HeroBlock>",
+      ")",
+      "",
+      "",
+      ""
     ]
   },
   {
@@ -68,6 +95,13 @@ const devItems = [
       "    path: path.resolve(__dirname, 'dist')",
       "  }",
       "};",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -85,6 +119,10 @@ const devItems = [
       "    .pipe(gulp.dest('web/css'))",
       "    .pipe(browserSync.reload({stream: true}));",
       "};",
+      "",
+      "",
+      "",
+      ""
     ]
   },
   {
@@ -105,25 +143,28 @@ const devItems = [
       "      color: $active;",
       "    }",
       "  }",
-      "}"
+      "}",
     ]
   },
   {
     name: 'styled-components',
     code: [
-    "import React from 'react';",
-    "import styled from 'styled-components';",
-    " ",
-    "const Title = styled.h1`",
-    "  font-size: 1.5em;",
-    "  text-align: center;",
-    "  color: palevioletred;",
-    "`;",
-    " ",
-    "const Wrapper = styled.section`",
-    "  padding: 4em;",
-    "  background: papayawhip;",
-    "`;",
+      "import React from 'react';",
+      "import styled from 'styled-components';",
+      " ",
+      "const Title = styled.h1`",
+      "  font-size: 1.5em;",
+      "  text-align: center;",
+      "  color: palevioletred;",
+      "`;",
+      " ",
+      "const Wrapper = styled.section`",
+      "  padding: 4em;",
+      "  background: papayawhip;",
+      "`;",
+      "",
+      "",
+      ""
     ]
   },
   {
@@ -142,7 +183,9 @@ const devItems = [
       "  80% { transform: translate(-1px, -1px) rotate(1deg); }",
       "  90% { transform: translate(2px, 2px) rotate(0deg); }",
       "  100% { transform: translate(1px, 2px) rotate(-1deg); }",
-    "}`"
+      "}`",
+      "",
+      ""
     ]
   },
 
