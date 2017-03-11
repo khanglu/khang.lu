@@ -14,10 +14,10 @@ const devItems = [
       "",
       "DESIGN:",
       " - Photoshop, Illustrator",
-      "*/",
+      "",
       "BACKEND:",
       " - Fundamental comprehension. I made PHP and Node.js apps.",
-      ""
+      "*/"
     ]
   },
   {
