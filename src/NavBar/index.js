@@ -43,7 +43,7 @@ const NavBarLink = styled(NavLink)`
     transform: scale(1.1);
   }
   &.active {
-    padding: 0 .5vh;
+    padding: 0 .8vh;
     border-radius: .3vh;
     color: ${props =>
       props.isPortraitMode
