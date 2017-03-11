@@ -4,10 +4,10 @@ const devItems = [
     code: [
       "/*",
       "J@VASCRIPT:",
-      " - Vanilla ES6+, React and its ecosystem, Redux, Webpack, Gulp",
+      " - Vanilla ES6+, React, Redux, Webpack, Gulp",
       "",
       "STYLING:",
-      " - Responsive Design, SASS, CSS Modules, styled-components, radium",
+      " - SASS, CSS Modules, styled-components, radium",
       "",
       "WORKFLOW TOOLS:",
       " - GitHub, GitFlow, Agile Development, BitBucket, Jira, Trello",
@@ -15,8 +15,8 @@ const devItems = [
       "DESIGN:",
       " - Photoshop, Illustrator",
       "*/",
-      "",
-      "",
+      "BACKEND:",
+      " - Fundamental comprehension. I made PHP and Node.js apps.",
       ""
     ]
   },
@@ -44,6 +44,9 @@ const devItems = [
   {
     name: 'react',
     code: [
+      "// Composition and funtional-oriented components.",
+      "// With a bit of local state and life-cycle methods *wink*",
+      "",
       "const Hero = (props) => (",
       "  <HeroBlock>",
       "    <HeroHeading tag=\"h1\">Front End Developer</HeroHeading>",
@@ -56,16 +59,13 @@ const devItems = [
       "      <Link onClick={() => props.addCorgi()}>Add a Corgi</Link>",
       "    </SocialBlock>",
       "  </HeroBlock>",
-      ")",
-      "",
-      "",
-      ""
+      ")"
     ]
   },
   {
     name: 'redux',
     code: [
-      "import { createStore } from 'redux'",
+      "// You might not need Redux, until you do",
       "",
       "function counter(state = 0, action) {",
       "  switch (action.type) {",
@@ -86,7 +86,13 @@ const devItems = [
   {
     name: 'webpack',
     code: [
-      "var path = require('path');",
+      "// I cannot live without Webpack now",
+      "// Transpiling, CSS-prefixing, hot-reloading, code-splitting",
+      "// Tree-shaking, minifying, assets-bundling, source-mapping",
+      "",
+      "// ALso coffee-making, rice-cooking, vacuum-cleaning",
+      "",
+      "const path = require('path');",
       "",
       "module.exports = {",
       "  entry: './app/index.js',",
@@ -95,19 +101,14 @@ const devItems = [
       "    path: path.resolve(__dirname, 'dist')",
       "  }",
       "};",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      ""
     ]
   },
   {
     name: 'gulp',
     code: [
       "// Processing SASS file and output to CSS",
+      "",
       "app.addStyle = function(paths, filename) {",
       "  gulp.src(paths)",
       "    .pipe(plumber())",
@@ -121,14 +122,13 @@ const devItems = [
       "};",
       "",
       "",
-      "",
       ""
     ]
   },
   {
     name: 'sass',
     code: [
-      "// NOT SURE IF I'LL EVER USE SASS AGAIN",
+      "// How to style a link properly in SASS",
       "",
       "@mixin link ($link, $visit, $hover, $active) {",
       "  a {",
@@ -149,6 +149,8 @@ const devItems = [
   {
     name: 'styled-components',
     code: [
+      "// This thing is life-saving",
+      "",
       "import React from 'react';",
       "import styled from 'styled-components';",
       "",
@@ -162,15 +164,14 @@ const devItems = [
       "  padding: 4em;",
       "  background: papayawhip;",
       "`;",
-      "",
-      "",
       ""
     ]
   },
   {
     name: 'animation',
     code: [
-      "// ANIMATION OF THE DOOR IN HOMEPAGE",
+      "// Animation of the door in homepage",
+      "",
       "const DoorShaking = keyframes`{",
       "  0% { transform: translate(2px, 1px) rotate(0deg); }",
       "  10% { transform: translate(-1px, -2px) rotate(-1deg); }",
@@ -184,7 +185,6 @@ const devItems = [
       "  90% { transform: translate(2px, 2px) rotate(0deg); }",
       "  100% { transform: translate(1px, 2px) rotate(-1deg); }",
       "}`",
-      "",
       ""
     ]
   },
