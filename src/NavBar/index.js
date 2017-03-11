@@ -36,7 +36,7 @@ const NavBarLink = styled(NavLink)`
   flex: 0 0 auto;
   margin: 0 .5em;
   text-decoration: none;
-  font-family: 'Unica One', cursive;
+  font-family: 'Caesar Dressing', cursive;
   font-size: 3vh;
   transition: .2s ease-in-out;
   &:hover {

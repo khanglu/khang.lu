@@ -1,6 +1,6 @@
 import { keyframes } from 'styled-components'
 
-export const animationConfig = '.3s 1 ease-out both';
+export const animationConfig = '.3s 1 ease-out backwards';
 
 export const zoomIn = keyframes`{
   from {

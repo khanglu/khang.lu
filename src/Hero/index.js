@@ -11,7 +11,7 @@ const Hero = (props) => (
       <SocialLink href="https://www.linkedin.com/in/khanglu/">LinkedIn</SocialLink>
       <SocialLink href="mailto:info@khang.lu">Email</SocialLink>
       <SocialLink href="https://github.com/khanglu/khang.lu">GitHub</SocialLink>
-      <SocialLink style={{fontSize: '2.3vh'}} onClick={()=>props.addCorgi()}>Add a Corgi</SocialLink>
+      <SocialLink style={{fontSize: '2.6vh'}} onClick={()=>props.addCorgi()}>Add a Corgi</SocialLink>
     </SocialBlock>
   </HeroBlock>
 )
@@ -26,28 +26,29 @@ const HeroBlock = styled.div`
 `
 const HeroHeading = styled.h2`
   color: ${props => props.theme.textColor};
-  font-family: 'Unica One', cursive;
-  font-size: 4.57vh;
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 4.78vh;
   margin: .6vh 0;
   animation: ${slideInUp} ${animationConfig};
+  font-weight: 400;
 `
 const NameBlock = styled.h1`
   display: inline;
-  border-radius: 3px;
+  border-radius: .04em;
   margin: 0 .1em;
-  padding: .1em .2em;
+  padding: 0 .15em;
   display: inline-block;
   background-color: ${props => props.theme.textColor};
   color: ${props => props.theme.bgColor};
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Caesar Dressing', sans-serif;
   letter-spacing: .2vh;
-  font-size: 8.5vh;
+  font-size: 8.9vh;
   animation: ${slideInRight} ${animationConfig};
 `
 const SocialBlock = styled.div`
   margin: 1vh auto;
   position: relative;
-  left: 2px;
+  left: 3px;
 `
 const SocialLink = styled.a`
   user-select: none;
@@ -58,7 +59,7 @@ const SocialLink = styled.a`
   color: ${props => props.theme.textColor};
   text-decoration: none;
   margin: 0 .5em;
-  font-family: 'Unica One', sans-serif;
+  font-family: 'Caesar Dressing', sans-serif;
   
   transition: .2s ease-in-out;
   &:hover {
