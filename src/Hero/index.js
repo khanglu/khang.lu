@@ -36,7 +36,7 @@ const NameBlock = styled.h1`
   display: inline;
   border-radius: .04em;
   margin: 0 .1em;
-  padding: 0 .15em;
+  padding: 0 .15em .02em;
   display: inline-block;
   background-color: ${props => props.theme.textColor};
   color: ${props => props.theme.bgColor};
