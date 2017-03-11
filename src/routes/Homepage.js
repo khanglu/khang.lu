@@ -38,7 +38,6 @@ class Homepage extends Component {
       </div>
     )
   }
-
 }
 
 const Hallway = styled.div`

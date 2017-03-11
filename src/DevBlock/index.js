@@ -5,6 +5,7 @@ import devItems from './devItems'
 import List from '../List'
 import ListItem from '../ListItem'
 import {transitionSettings} from '../theme'
+import {slideInDown, animationConfig} from '../animation'
 
 class DevBlock extends Component {
   constructor (props) {
@@ -74,6 +75,7 @@ const DevHeading = styled.h1`
   margin: ${props => props.isCompact ? '2.5vw 0 3vw' : '2vw 0 .5vw'};
   left: 0.04em;
   transition: ${transitionSettings} ease-out;
+  animation: ${slideInDown} ${animationConfig};
 `
 const SkillsBlock = styled.div`
   vertical-align: top;

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
+import {slideInUp, animationConfig} from '../animation'
 
 const Door = (props) => (
   <DoorContainer onClick={() => props.changeTheme()}>
@@ -50,6 +51,8 @@ const shaking = keyframes`{
 const DoorContainer = styled.div`
   text-align: center;
   user-select: none;
+  position: relative;
+  bottom: -4px;
   svg {
     height: 20vh;
     path, rect {
@@ -58,11 +61,9 @@ const DoorContainer = styled.div`
       transition: .5s;
     }
     &:hover {
-      position: relative;
-      bottom: -2px;
-      animation: ${shaking} 0.8s infinite;
-      animation-timing-function: linear;
+      animation: ${shaking} 0.8s infinite linear;
     }
   }
+  animation: ${slideInUp} ${animationConfig};
 `
 export default Door

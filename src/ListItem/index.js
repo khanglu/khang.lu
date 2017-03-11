@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { zoomIn , animationConfig} from '../animation'
 
 const ListItem = styled.li`
   user-select: none;
@@ -9,6 +10,11 @@ const ListItem = styled.li`
   transition: .2s;
   span:focus {
     outline: none;
+  }
+  
+  span {
+    display: inline-block;
+    animation: ${zoomIn} ${animationConfig};
   }
 `
 export default ListItem

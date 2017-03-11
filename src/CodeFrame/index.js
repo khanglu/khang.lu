@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {transitionSettings} from '../theme'
+import {slideInUp, animationConfig} from '../animation'
 
 const CodeFrame = (props) => {
   return (
@@ -23,6 +24,7 @@ const CodeWrapper = styled.div`
   display: inline-block;
   width: ${props => (props.isPortraitMode ? '90vw' : props.isCompact ? 0 : '46vw')};
   transition: ${transitionSettings};
+  animation: ${slideInUp} ${animationConfig};
 `
 const CodeContainer = styled.div`
   padding: 1vw 0;

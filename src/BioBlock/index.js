@@ -6,6 +6,7 @@ import List from '../List'
 import ListItem from '../ListItem'
 import {transitionSettings} from '../theme'
 import devItems from '../DevBlock/devItems'
+import {slideInUp, animationConfig} from '../animation'
 
 class BioBlock extends Component {
   constructor (props) {
@@ -74,6 +75,7 @@ const BioHeading = styled.h1`
   position: relative;
   right: 0.04em;
   transition: ${transitionSettings} ease-out;
+  animation: ${slideInUp} ${animationConfig};
 `
 const BioList = styled.div`
   vertical-align: top;

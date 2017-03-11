@@ -11,7 +11,7 @@ class App extends Component {
     super()
     this.state = {
       // Get random number between 0 and 3 to randomize theme
-      themeIndex: Math.floor(Math.random() * allThemes.length),
+      themeIndex: 1,
       isPortraitMode: window.innerWidth/window.innerHeight < 1.3
     }
     this.changeTheme = this.changeTheme.bind(this)
@@ -72,6 +72,7 @@ const Background = styled.div`
   height: 100%;
   object-fit: contain;
   transition: .5s;
+  animatio
 `
 
 

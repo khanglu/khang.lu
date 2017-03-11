@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {slideInLeft, slideInRight, slideInUp, animationConfig} from '../animation'
 
 const Hero = (props) => (
   <HeroBlock>
@@ -28,6 +29,7 @@ const HeroHeading = styled.h2`
   font-family: 'Unica One', cursive;
   font-size: 4.57vh;
   margin: .6vh 0;
+  animation: ${slideInUp} ${animationConfig};
 `
 const NameBlock = styled.h1`
   display: inline;
@@ -40,6 +42,7 @@ const NameBlock = styled.h1`
   font-family: 'Fjalla One', sans-serif;
   letter-spacing: .2vh;
   font-size: 8.5vh;
+  animation: ${slideInRight} ${animationConfig};
 `
 const SocialBlock = styled.div`
   margin: 1vh auto;
@@ -61,6 +64,7 @@ const SocialLink = styled.a`
   &:hover {
     transform: scale(1.1);
   }
+  animation: ${slideInLeft} ${animationConfig};
 `
 
 
