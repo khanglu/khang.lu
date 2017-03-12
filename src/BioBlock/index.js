@@ -12,7 +12,6 @@ class BioBlock extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      isCompact: props.isCompact,
       activeImage: 0
     }
     this.changeImage = this.changeImage.bind(this)

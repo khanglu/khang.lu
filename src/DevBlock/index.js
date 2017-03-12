@@ -11,7 +11,6 @@ class DevBlock extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      isCompact: props.isCompact,
       activeCodeItem: 0
     }
     this.changeCode = this.changeCode.bind(this)
