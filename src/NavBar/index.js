@@ -7,8 +7,8 @@ const NavBar = (props) => (
   <NavBarContainer {...props}>
     <Tabitha changeTheme={props.changeTheme} />
     <NavLinkContainer>
-      <NavBarLink {...props} to="/" exact activeClassName="active">Home</NavBarLink>
-      <NavBarLink {...props} to="/about" activeClassName="active">About</NavBarLink>
+      <NavBarLink {...props} to="/" exact>Home</NavBarLink>
+      <NavBarLink {...props} to="/about">About</NavBarLink>
     </NavLinkContainer>
   </NavBarContainer>
 )
