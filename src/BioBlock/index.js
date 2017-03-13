@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import bioItems from './bioItems'
 import ImageFrame from '../ImageFrame'
@@ -8,7 +8,7 @@ import {transitionSettings} from '../theme'
 import devItems from '../DevBlock/devItems'
 import {slideInUp, animationConfig} from '../animation'
 
-class BioBlock extends Component {
+class BioBlock extends PureComponent {
   constructor (props) {
     super(props)
     this.state = {

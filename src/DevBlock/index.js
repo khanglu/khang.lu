@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import CodeFrame from '../CodeFrame'
 import devItems from './devItems'
@@ -7,7 +7,7 @@ import ListItem from '../ListItem'
 import {transitionSettings} from '../theme'
 import {slideInDown, animationConfig} from '../animation'
 
-class DevBlock extends Component {
+class DevBlock extends PureComponent {
   constructor (props) {
     super(props)
     this.state = {

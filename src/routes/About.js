@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import styled from 'styled-components'
 import DevBlock from '../DevBlock'
 import BioBlock from '../BioBlock'
 import bioItems from '../BioBlock/bioItems'
 import LazyLoadImage from '../LazyLoadImage'
 
-class About extends Component {
+class About extends PureComponent {
   constructor (props) {
     super(props)
     this.state = {

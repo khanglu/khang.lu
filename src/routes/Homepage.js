@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import styled from 'styled-components'
 import Hero from '../Hero'
 import Corgi from '../Corgi'
@@ -6,7 +6,7 @@ import Door from '../Door'
 import LazyLoadImage from '../LazyLoadImage'
 import CorgiGif from '../../staticAssets/corgi.gif'
 
-class Homepage extends Component {
+class Homepage extends PureComponent {
   constructor() {
     super()
     this.state = {
