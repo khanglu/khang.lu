@@ -5,6 +5,7 @@ import NavBar from './NavBar'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Homepage from './routes/Homepage'
 import About from './routes/About'
+import ParticlesWrapper from './ParticlesWrapper'
 
 class App extends PureComponent {
   constructor () {
@@ -43,6 +44,9 @@ class App extends PureComponent {
           <div>
               <Route exact path="/" render={() => (
                 <Background>
+                  {!this.state.isPortraitMode &&
+                    <ParticlesWrapper color={allThemes[this.state.themeIndex].textColor} key={this.state.themeIndex} />
+                  }
                   <NavBar changeTheme={this.changeTheme} page='homepage' />
                   <Homepage changeTheme={this.changeTheme} />
                 </Background>

@@ -30,7 +30,7 @@ class Homepage extends PureComponent {
       <div>
         <Hero addCorgi={this.addCorgi} />
         <Hallway>
-          <Door changeTheme={this.props.changeTheme} color={0} title="" />
+          <Door changeTheme={this.props.changeTheme} />
           <Floor />
         </Hallway>
         {corgis}

@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import CodeFrame from '../CodeFrame'
 import devItems from './devItems'
 import List from '../List'
 import ListItem from '../ListItem'
 import {transitionSettings} from '../theme'
 import {slideInDown, animationConfig} from '../animation'
+import ParticlesWrapper from '../ParticlesWrapper'
 
 class DevBlock extends PureComponent {
   constructor (props) {
@@ -25,6 +26,7 @@ class DevBlock extends PureComponent {
   render () {
     return (
       <DevWrapper {...this.props} >
+        <ParticlesWrapper color={this.props.theme.textColor} />
         <DevHeading {...this.props}>DEV</DevHeading>
         <SkillsBlock {...this.props}>
           <List color='dev' {...this.props}>
@@ -83,4 +85,4 @@ const SkillsBlock = styled.div`
   transition: ${transitionSettings};
 `
 
-export default DevBlock
+export default withTheme(DevBlock)

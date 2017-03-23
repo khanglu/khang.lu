@@ -2,6 +2,20 @@
 # yarn lockfile v1
 
 
+"@types/node@^7.0.8":
+  version "7.0.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.10.tgz#d860abb18c1b58b552c7c6cd8b2ba7adf6546fa3"
+
+"@types/react-dom@^0.14.23":
+  version "0.14.23"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-0.14.23.tgz#cecfcfad754b4c2765fe5d29b81b301889ad6c2e"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^15.0.16":
+  version "15.0.18"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.18.tgz#258b1cda9d9aa875d68d317238c31eefdaa1a557"
+
 abab@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.3.tgz#b81de5f7274ec4e756d797cd834f303642724e5d"
@@ -4311,6 +4325,15 @@ react-dom@^15.4.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
+react-particles-js@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-1.5.0.tgz#d30313c52941282b8f8f58eaf909056bcf57a2ba"
+  dependencies:
+    "@types/node" "^7.0.8"
+    "@types/react" "^15.0.16"
+    "@types/react-dom" "^0.14.23"
+    react "^15.4.1"
+
 react-router-dom@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.0.0.tgz#4fa4418e14b8cfc5bcc0bdea0c4083fb8c2aef10"
@@ -4377,7 +4400,7 @@ react-scripts@0.9.0:
   optionalDependencies:
     fsevents "1.0.17"
 
-react@^15.4.2:
+react@^15.4.1, react@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:

@@ -10,6 +10,7 @@ const List = styled.ul`
   color: ${ props => props.name === 'bio' ? props.theme.bgColor : props.theme.textColor};
   font-family: 'Fjalla One', sans-serif;
   font-size: ${props => (props.isPortraitMode ? '5vw' : '2vw')};
+  position: relative;
 `
 
 export default List
