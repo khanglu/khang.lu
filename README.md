@@ -6,6 +6,7 @@
 - [react-router 4.0](https://github.com/ReactTraining/react-router)- Complete routing library for React
 - Google Fonts
 - Special thanks to [Jeca Martinex](http://jecamartinez.com/) and the corgis
+- particles.js and react-particles-js
 - Adobe Photoshop and Adobe Illustrator
 - DNS.lu for the domain
 - CloudFlare for free DNS service
