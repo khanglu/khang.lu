@@ -1,3 +1,5 @@
+// Config file for particles.js
+
 export const particleWebConfig = `{
   "particles": {
   "number": {

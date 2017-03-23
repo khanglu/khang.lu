@@ -3,13 +3,15 @@ import styled from 'styled-components'
 import {transitionSettings} from '../theme'
 import {slideInUp, animationConfig} from '../animation'
 
+// Code block in About page
 const CodeFrame = (props) => {
   return (
     <CodeWrapper {...props}>
       <CodeContainer {...props}>
         {props.code.map((line, index) => {
           let indexText = index + 1;
-          if (index < 10) {
+          // Ensure line number 1 to 9 has one extra space so they has the same character as double-digit lines
+          if (index < 9) {
             indexText = index + 1 + ' ';
           }
           return <CodeLine {...props} key={index}><pre>{indexText + "    " + line}</pre></CodeLine>

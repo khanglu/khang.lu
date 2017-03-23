@@ -1,6 +1,6 @@
 const devItems = [
   {
-    name: 'tool box',
+    name: 'skill set',
     code: [
       "/*",
       "J@VASCRIPT:",
@@ -21,20 +21,20 @@ const devItems = [
     ]
   },
   {
-    name: 'responsive?',
+    name: 'this page',
     code: [
-      "This page is responsive, not just based on browser's width.",
-      "",
-      "It works regardless of device, OS, portrait or landscape mode.",
-      "",
-      "All modern browsers supported.",
-      "",
-      "I'm not sure about IE though.",
-      "",
-      "",
-      "",
-      "",
-      "",
+      "/*",
+      "* This page was made using the latest front-end technologies",
+      "* including react, react-router@4 and styled-components.",
+      "* ",
+      "* Unlike the traditional approach of responsive design",
+      "* which changes the layout base on browser's width,",
+      "* Components here are responsive to the ratio of browser frame.",
+      "* ",
+      "* Thus, it works regardless of device, OS, portrait or landscape.",
+      "* ",
+      "* All modern browsers supported.",
+      "*/",
       "",
       "",
       "",

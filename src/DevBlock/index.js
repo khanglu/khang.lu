@@ -8,6 +8,7 @@ import {transitionSettings} from '../theme'
 import {slideInDown, animationConfig} from '../animation'
 import ParticlesWrapper from '../ParticlesWrapper'
 
+// DEV block in about page
 class DevBlock extends PureComponent {
   constructor (props) {
     super(props)
