@@ -18,7 +18,7 @@ const Hero = (props) => (
 
 const HeroBlock = styled.div`
   text-align: center;
-  margin: 9em auto 4em;
+  margin: 16vh auto 4vh;
   user-select: none;
   * {
     transition: .5s;
