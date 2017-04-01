@@ -4,7 +4,7 @@ const devItems = [
     code: [
       "/*",
       "J@VASCRIPT:",
-      " - Vanilla ES6+, React, Redux, Webpack, Gulp, npm, yarn",
+      " - Vanilla ES6+, React, Redux, Flow, Webpack, Yarn, Jest",
       "",
       "STYLING:",
       " - SASS, CSS Modules, styled-components, radium",
