@@ -47,6 +47,7 @@ const Door = (props) => {
   </DoorContainer>)
 }
 
+// Define keyframes before use, otherwise styled-component will break
 const shaking = keyframes`{
 	0% { transform: translate(1px, 1px) rotate(0deg); }
 	10% { transform: translate(-1px, -1px) rotate(-1deg); }
