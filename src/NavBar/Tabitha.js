@@ -18,7 +18,7 @@ const TabithaContainer = styled.div`
     height: 3em;
     margin: 1em;
     path {
-      fill: ${props => props.theme.textColor}
+      fill: ${props => props.theme.textColor};
       pointer-events: all;
       transition: .5s;
     }

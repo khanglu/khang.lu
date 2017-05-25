@@ -27,7 +27,7 @@ const NavLinkContainer = styled.div`
   padding-right: 1em;
 `;
 const NavBarLink = styled(NavLink)`
-  color: ${props => (props.isPortraitMode ? props.theme.textColor : props.page === "about" ? props.theme.bgColor : props.theme.textColor)}
+  color: ${props => (props.isPortraitMode ? props.theme.textColor : props.page === "about" ? props.theme.bgColor : props.theme.textColor)};
   flex: 0 0 auto;
   margin: 0 .5em;
   text-decoration: none;
@@ -40,8 +40,8 @@ const NavBarLink = styled(NavLink)`
   &.active {
     padding: 0 .8vh;
     border-radius: .3vh;
-    color: ${props => (props.isPortraitMode ? props.theme.bgColor : props.page === "about" ? props.theme.textColor : props.theme.bgColor)}
-    background-color: ${props => (props.isPortraitMode ? props.theme.textColor : props.page === "about" ? props.theme.bgColor : props.theme.textColor)}
+    color: ${props => (props.isPortraitMode ? props.theme.bgColor : props.page === "about" ? props.theme.textColor : props.theme.bgColor)};
+    background-color: ${props => (props.isPortraitMode ? props.theme.textColor : props.page === "about" ? props.theme.bgColor : props.theme.textColor)};
   }
 `;
 

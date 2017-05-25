@@ -82,7 +82,7 @@ const Door = props => {
 };
 
 // Define keyframes before use, otherwise styled-component will break
-const shaking = keyframes`{
+const shaking = keyframes`
 	0% { transform: translate(1px, 1px) rotate(0deg); }
 	10% { transform: translate(-1px, -1px) rotate(-1deg); }
 	20% { transform: translate(-1px, 0px) rotate(1deg); }
@@ -94,7 +94,6 @@ const shaking = keyframes`{
 	80% { transform: translate(-1px, -1px) rotate(1deg); }
 	90% { transform: translate(1px, 1px) rotate(0deg); }
 	100% { transform: translate(1px, 1px) rotate(-1deg); }
-}
 `;
 const DoorContainer = styled.div`
   text-align: center;
@@ -103,14 +102,12 @@ const DoorContainer = styled.div`
   bottom: -4px;
   svg {
     height: 20vh;
+    animation: ${shaking} 1.6s infinite linear; 
     path, rect {
-      fill: ${props => props.theme.textColor}
+      fill: ${props => props.theme.textColor};
       pointer-events: all;
       transition: .2s;
-    }
-    
-      animation: ${shaking} 1.6s infinite linear;
-    
+    }   
   }
   animation: ${slideInUp} ${animationConfig};
 `;

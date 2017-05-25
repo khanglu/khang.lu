@@ -29,7 +29,7 @@ const Description = styled.p`
   font-family: 'Fjalla One', sans-serif;
   text-align: center;
   ${props => !props.isPortraitMode && props.isCompact && "opacity: 0;"}
-  color: ${props => props.theme.bgColor}
+  color: ${props => props.theme.bgColor};
   transition: .2s;
   font-size: ${props => (props.isPortraitMode ? "3vw" : "1.3vw")};
   min-width: 46vw;
