@@ -1,20 +1,32 @@
-import React from 'react'
-import styled from 'styled-components'
-import {slideInLeft, slideInRight, slideInUp, animationConfig} from '../animation'
+import React from "react";
+import styled from "styled-components";
+import {
+  slideInLeft,
+  slideInRight,
+  slideInUp,
+  animationConfig
+} from "../animation";
 
-const Hero = (props) => (
+const Hero = props => (
   <HeroBlock>
     <HeroHeading tag="h1">Front End Developer</HeroHeading>
     <NameBlock>Khang</NameBlock>
     <NameBlock>Lu</NameBlock>
     <SocialBlock>
-      <SocialLink href="https://www.linkedin.com/in/khanglu/">LinkedIn</SocialLink>
+      <SocialLink href="https://www.linkedin.com/in/khanglu/">
+        LinkedIn
+      </SocialLink>
       <SocialLink href="mailto:info@khang.lu">Email</SocialLink>
       <SocialLink href="https://github.com/khanglu/khang.lu">GitHub</SocialLink>
-      <SocialLink style={{fontSize: '2.6vh'}} onClick={()=>props.addCorgi()}>Add a Corgi</SocialLink>
+      <SocialLink
+        style={{ fontSize: "2.6vh" }}
+        onClick={() => props.addCorgi()}
+      >
+        Add a Corgi
+      </SocialLink>
     </SocialBlock>
   </HeroBlock>
-)
+);
 
 const HeroBlock = styled.div`
   text-align: center;
@@ -23,7 +35,7 @@ const HeroBlock = styled.div`
   * {
     transition: .5s;
   }
-`
+`;
 const HeroHeading = styled.h2`
   color: ${props => props.theme.textColor};
   font-family: 'Caesar Dressing', cursive;
@@ -31,7 +43,7 @@ const HeroHeading = styled.h2`
   margin: .6vh 0;
   animation: ${slideInUp} ${animationConfig};
   font-weight: 400;
-`
+`;
 const NameBlock = styled.h1`
   display: inline;
   border-radius: .04em;
@@ -44,12 +56,12 @@ const NameBlock = styled.h1`
   letter-spacing: .2vh;
   font-size: 8.9vh;
   animation: ${slideInRight} ${animationConfig};
-`
+`;
 const SocialBlock = styled.div`
   margin: 1vh auto;
   position: relative;
   left: 3px;
-`
+`;
 const SocialLink = styled.a`
   user-select: none;
   cursor: pointer;
@@ -66,7 +78,6 @@ const SocialLink = styled.a`
     transform: scale(1.1);
   }
   animation: ${slideInLeft} ${animationConfig};
-`
+`;
 
-
-export default Hero
+export default Hero;

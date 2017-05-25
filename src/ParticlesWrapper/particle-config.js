@@ -109,4 +109,4 @@ export const particleWebConfig = `{
   }
 },
   "retina_detect": false
-}`
+}`;

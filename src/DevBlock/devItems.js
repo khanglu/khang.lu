@@ -1,6 +1,6 @@
 const devItems = [
   {
-    name: 'skill set',
+    name: "skill set",
     code: [
       "/*",
       "J@VASCRIPT:",
@@ -21,7 +21,7 @@ const devItems = [
     ]
   },
   {
-    name: 'this page',
+    name: "this page",
     code: [
       "/*",
       "* This page was made using the latest front-end technologies",
@@ -42,14 +42,14 @@ const devItems = [
     ]
   },
   {
-    name: 'react',
+    name: "react",
     code: [
       "// Composition and funtional-oriented components.",
       "// With a bit of local state and life-cycle methods *wink*",
       "",
       "const Hero = (props) => (",
       "  <HeroBlock>",
-      "    <HeroHeading tag=\"h1\">Front End Developer</HeroHeading>",
+      '    <HeroHeading tag="h1">Front End Developer</HeroHeading>',
       "    <NameBlock>Khang</NameBlock>",
       "    <NameBlock>Lu</NameBlock>",
       "    <SocialBlock>",
@@ -63,7 +63,7 @@ const devItems = [
     ]
   },
   {
-    name: 'redux',
+    name: "redux",
     code: [
       "// You might not need Redux, until you do",
       "",
@@ -84,7 +84,7 @@ const devItems = [
     ]
   },
   {
-    name: 'webpack',
+    name: "webpack",
     code: [
       "// I cannot live without Webpack now",
       "// Transpiling, CSS-prefixing, hot-reloading, code-splitting",
@@ -105,7 +105,7 @@ const devItems = [
     ]
   },
   {
-    name: 'gulp',
+    name: "gulp",
     code: [
       "// Processing SASS file and output to CSS",
       "",
@@ -126,7 +126,7 @@ const devItems = [
     ]
   },
   {
-    name: 'sass',
+    name: "sass",
     code: [
       "// How to style a link properly in SASS",
       "",
@@ -143,11 +143,11 @@ const devItems = [
       "      color: $active;",
       "    }",
       "  }",
-      "}",
+      "}"
     ]
   },
   {
-    name: 'styled-components',
+    name: "styled-components",
     code: [
       "// This thing is life-saving",
       "",
@@ -168,7 +168,7 @@ const devItems = [
     ]
   },
   {
-    name: 'animation',
+    name: "animation",
     code: [
       "// Animation of the door in homepage",
       "",
@@ -187,8 +187,7 @@ const devItems = [
       "}`",
       ""
     ]
-  },
+  }
+];
 
-]
-
-export default devItems
+export default devItems;

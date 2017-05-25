@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
-import Tabitha from './Tabitha'
+import React from "react";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import Tabitha from "./Tabitha";
 
-const NavBar = (props) => (
+const NavBar = props => (
   <NavBarContainer {...props}>
     <Tabitha changeTheme={props.changeTheme} />
     <NavLinkContainer>
@@ -11,7 +11,7 @@ const NavBar = (props) => (
       <NavBarLink {...props} to="/about">About</NavBarLink>
     </NavLinkContainer>
   </NavBarContainer>
-)
+);
 
 const NavBarContainer = styled.div`
   z-index: 69;
@@ -20,19 +20,14 @@ const NavBarContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-`
+`;
 const NavLinkContainer = styled.div`
   display: flex;
   align-items: center;
   padding-right: 1em;
-`
+`;
 const NavBarLink = styled(NavLink)`
-  color: ${props => 
-    props.isPortraitMode 
-      ? props.theme.textColor 
-      : props.page === 'about' 
-        ? props.theme.bgColor 
-        : props.theme.textColor}
+  color: ${props => (props.isPortraitMode ? props.theme.textColor : props.page === "about" ? props.theme.bgColor : props.theme.textColor)}
   flex: 0 0 auto;
   margin: 0 .5em;
   text-decoration: none;
@@ -45,19 +40,9 @@ const NavBarLink = styled(NavLink)`
   &.active {
     padding: 0 .8vh;
     border-radius: .3vh;
-    color: ${props =>
-      props.isPortraitMode
-        ? props.theme.bgColor
-        : props.page === 'about'
-          ? props.theme.textColor
-          : props.theme.bgColor}
-    background-color: ${props =>
-      props.isPortraitMode
-        ? props.theme.textColor
-        : props.page === 'about'
-          ? props.theme.bgColor
-          : props.theme.textColor}
+    color: ${props => (props.isPortraitMode ? props.theme.bgColor : props.page === "about" ? props.theme.textColor : props.theme.bgColor)}
+    background-color: ${props => (props.isPortraitMode ? props.theme.textColor : props.page === "about" ? props.theme.bgColor : props.theme.textColor)}
   }
-`
+`;
 
-export default NavBar
+export default NavBar;

@@ -1,32 +1,31 @@
-import React, {PureComponent} from 'react'
-import styled from 'styled-components'
-import DevBlock from '../DevBlock'
-import BioBlock from '../BioBlock'
-import bioItems from '../BioBlock/bioItems'
-import LazyLoadImage from '../LazyLoadImage'
+import React, { PureComponent } from "react";
+import styled from "styled-components";
+import DevBlock from "../DevBlock";
+import BioBlock from "../BioBlock";
+import bioItems from "../BioBlock/bioItems";
+import PreLoadImage from "../PreLoadImage";
 
 class About extends PureComponent {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       isDevBig: true
-    }
-    this.enlarge = this.enlarge.bind(this)
+    };
+    this.enlarge = this.enlarge.bind(this);
   }
 
-  enlarge (block) {
-    if (block === 'dev') {
-      this.setState({ isDevBig: true })
+  enlarge(block) {
+    if (block === "dev") {
+      this.setState({ isDevBig: true });
     } else {
-      this.setState({ isDevBig: false })
+      this.setState({ isDevBig: false });
     }
   }
 
+  render() {
+    const { isPortraitMode } = this.props;
 
-  render () {
-    const {isPortraitMode} = this.props
-
-    return(
+    return (
       <AboutContainer isPortraitMode={isPortraitMode}>
         <DevBlock
           isPortraitMode={isPortraitMode}
@@ -38,23 +37,17 @@ class About extends PureComponent {
           isCompact={this.state.isDevBig}
           enlarge={block => isPortraitMode || this.enlarge(block)}
         />
-        {
-          bioItems.map((item, i) => {
-            return <LazyLoadImage key={i} src={item.src} />
-          })
-        }
+        {bioItems.map((item, i) => {
+          return <PreLoadImage key={i} src={item.src} />;
+        })}
       </AboutContainer>
-    )
+    );
   }
 }
 
 const AboutContainer = styled.div`
   display: flex;
-  ${props => (
-    props.isPortraitMode
-      ? 'padding-top: 5em; flex-direction: column; background-color:' + props.theme.bgColor + ';'
-      : 'flex-direction: row;'
-  )}
-`
+  ${props => (props.isPortraitMode ? "padding-top: 5em; flex-direction: column; background-color:" + props.theme.bgColor + ";" : "flex-direction: row;")}
+`;
 
-export default About
+export default About;
