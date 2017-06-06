@@ -2,7 +2,7 @@ import { keyframes } from "styled-components";
 
 export const animationConfig = ".2s 1 ease-out backwards";
 
-export const zoomIn = keyframes`{
+export const zoomIn = keyframes`
   from {
     opacity: 0;
     transform: scale3d(.3, .3, .3);
@@ -11,9 +11,9 @@ export const zoomIn = keyframes`{
   50% {
     opacity: 1;
   }
-}`;
+`;
 
-export const slideInUp = keyframes`{
+export const slideInUp = keyframes`
   from {
     transform: translate3d(0, 100%, 0);
     visibility: visible;
@@ -22,9 +22,9 @@ export const slideInUp = keyframes`{
   to {
     transform: translate3d(0, 0, 0);
   }
-}`;
+`;
 
-export const slideInDown = keyframes`{
+export const slideInDown = keyframes`
   from {
     transform: translate3d(0, -100%, 0);
     visibility: visible;
@@ -33,9 +33,9 @@ export const slideInDown = keyframes`{
   to {
     transform: translate3d(0, 0, 0);
   }
-}`;
+`;
 
-export const slideInLeft = keyframes`{
+export const slideInLeft = keyframes`
   from {
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
@@ -44,9 +44,9 @@ export const slideInLeft = keyframes`{
   to {
     transform: translate3d(0, 0, 0);
   }
-}`;
+`;
 
-export const slideInRight = keyframes`{
+export const slideInRight = keyframes`
   from {
     transform: translate3d(100%, 0, 0);
     visibility: visible;
@@ -55,4 +55,4 @@ export const slideInRight = keyframes`{
   to {
     transform: translate3d(0, 0, 0);
   }
-}`;
+`;
