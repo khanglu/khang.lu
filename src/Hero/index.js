@@ -5,7 +5,7 @@ import {
   slideInRight,
   slideInUp,
   animationConfig
-} from "../animation";
+} from "../utilities/animation";
 
 const Hero = props => (
   <HeroBlock>

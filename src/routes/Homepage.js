@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Hero from "../Hero";
 import Corgi from "../Corgi";
 import Door from "../Door";
-import PreLoadImage from "../PreLoadImage";
+import PreLoadImage from "../utilities/PreLoadImage";
 import CorgiGif from "../../staticAssets/corgi.gif";
 
 class Homepage extends PureComponent {

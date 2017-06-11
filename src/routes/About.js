@@ -3,7 +3,7 @@ import styled from "styled-components";
 import DevBlock from "../DevBlock";
 import BioBlock from "../BioBlock";
 import bioItems from "../BioBlock/bioItems";
-import PreLoadImage from "../PreLoadImage";
+import PreLoadImage from "../utilities/PreLoadImage";
 
 class About extends PureComponent {
   constructor(props) {

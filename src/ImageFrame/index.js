@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { transitionSettings } from "../theme";
+import { transitionSettings } from "../utilities/theme";
 
 const ImageFrame = props => {
   return (

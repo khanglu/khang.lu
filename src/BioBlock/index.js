@@ -4,9 +4,9 @@ import bioItems from "./bioItems";
 import ImageFrame from "../ImageFrame";
 import List from "../List";
 import ListItem from "../ListItem";
-import { transitionSettings } from "../theme";
+import { transitionSettings } from "../utilities/theme";
 import devItems from "../DevBlock/devItems";
-import { slideInUp, animationConfig } from "../animation";
+import { slideInUp, animationConfig } from "../utilities/animation";
 
 class BioBlock extends PureComponent {
   constructor(props) {

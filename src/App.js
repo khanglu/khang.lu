@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { allThemes } from "./theme";
+import { allThemes } from "./utilities/theme";
 import NavBar from "./NavBar";
 import { BrowserRouter, Route } from "react-router-dom";
 import Homepage from "./routes/Homepage";

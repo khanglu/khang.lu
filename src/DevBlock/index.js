@@ -4,8 +4,8 @@ import CodeFrame from "../CodeFrame";
 import devItems from "./devItems";
 import List from "../List";
 import ListItem from "../ListItem";
-import { transitionSettings } from "../theme";
-import { slideInDown, animationConfig } from "../animation";
+import { transitionSettings } from "../utilities/theme";
+import { slideInDown, animationConfig } from "../utilities/animation";
 import ParticlesWrapper from "../ParticlesWrapper";
 
 // DEV block in about page
