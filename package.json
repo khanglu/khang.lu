@@ -6,7 +6,8 @@
   "devDependencies": {
     "flow-bin": "^0.47.0",
     "gh-pages": "^0.12.0",
-    "react-scripts": "0.9.0"
+    "react-scripts": "0.9.0",
+    "why-did-you-update": "0.0.8"
   },
   "dependencies": {
     "enzyme": "^2.8.0",
