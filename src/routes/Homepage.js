@@ -1,3 +1,4 @@
+// @flow
 import React, { PureComponent } from "react";
 import styled from "styled-components";
 import Hero from "../Hero";
@@ -7,19 +8,15 @@ import PreLoadImage from "../utilities/PreLoadImage";
 import CorgiGif from "../../staticAssets/corgi.gif";
 
 class Homepage extends PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      corgiCount: 0
-    };
-    this.addCorgi = this.addCorgi.bind(this);
-  }
+  state = {
+    corgiCount: 0
+  };
 
-  addCorgi() {
+  addCorgi = () => {
     if (this.state.corgiCount < 20) {
       this.setState({ corgiCount: this.state.corgiCount + 1 });
     }
-  }
+  };
 
   render() {
     let corgis = [];

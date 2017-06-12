@@ -1,3 +1,4 @@
+// @flow
 import React, { PureComponent } from "react";
 import styled from "styled-components";
 import bioItems from "./bioItems";
@@ -9,17 +10,13 @@ import devItems from "../DevBlock/devItems";
 import { slideInUp, animationConfig } from "../utilities/animation";
 
 class BioBlock extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeImage: 0
-    };
-    this.changeImage = this.changeImage.bind(this);
-  }
+  state = {
+    activeImage: 0
+  };
 
-  changeImage(index) {
+  changeImage = (index: number) => {
     this.setState({ activeImage: index }, () => this.props.enlarge("bio"));
-  }
+  };
 
   render() {
     return (

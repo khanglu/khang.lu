@@ -1,3 +1,4 @@
+// @flow
 import React, { PureComponent } from "react";
 import styled, { withTheme } from "styled-components";
 import CodeFrame from "../CodeFrame";
@@ -10,17 +11,13 @@ import ParticlesWrapper from "../ParticlesWrapper";
 
 // DEV block in about page
 class DevBlock extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeCodeItem: 0
-    };
-    this.changeCode = this.changeCode.bind(this);
-  }
+  state = {
+    activeCodeItem: 0
+  };
 
-  changeCode(index) {
+  changeCode = (index: number) => {
     this.setState({ activeCodeItem: index }, () => this.props.enlarge("dev"));
-  }
+  };
 
   render() {
     return (

@@ -1,3 +1,4 @@
+// @flow
 import React, { PureComponent } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { allThemes } from "./utilities/theme";
@@ -8,35 +9,29 @@ import About from "./routes/About";
 import ParticlesWrapper from "./ParticlesWrapper";
 
 class App extends PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      // Get random number between 0 and 3 to randomize theme
-      themeIndex: 1,
-      isPortraitMode: window.innerWidth / window.innerHeight < 1.3
-    };
-    this.changeTheme = this.changeTheme.bind(this);
-    this.handleResize = this.handleResize.bind(this);
-  }
+  state = {
+    themeIndex: 1,
+    isPortraitMode: window.innerWidth / window.innerHeight < 1.3
+  };
 
   componentDidMount() {
     window.addEventListener("resize", this.handleResize);
   }
 
-  handleResize() {
+  handleResize = () => {
     this.setState({
       isPortraitMode: window.innerWidth / window.innerHeight < 1.3
     });
-  }
+  };
 
-  changeTheme() {
+  changeTheme = () => {
     // Randomize new theme that is different from the current one
     let newThemeIndex = this.state.themeIndex;
     while (newThemeIndex === this.state.themeIndex) {
       newThemeIndex = Math.floor(Math.random() * allThemes.length);
     }
     this.setState({ themeIndex: newThemeIndex });
-  }
+  };
 
   render() {
     const { themeIndex } = this.state;
