@@ -74,7 +74,7 @@ const DevHeading = styled.h1`
   font-family: 'Anton', sans-serif;
   margin: ${props => (props.isCompact ? "2.5vw 0 3vw" : "2vw 0 .5vw")};
   left: 0.04em;
-  transition: ${transitionSettings} ease-out;
+  transition: ${transitionSettings};
   animation: ${slideInDown} ${animationConfig};
 `;
 const SkillsBlock = styled.div`

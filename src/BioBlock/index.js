@@ -69,7 +69,7 @@ const BioHeading = styled.h1`
   margin: ${props => (props.isCompact ? "2.5vw 0 3vw" : "2vw 0 .5vw")};
   position: relative;
   right: 0.04em;
-  transition: ${transitionSettings} ease-out;
+  transition: ${transitionSettings};
   animation: ${slideInUp} ${animationConfig};
 `;
 const BioList = styled.div`
