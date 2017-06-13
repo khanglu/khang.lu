@@ -1,26 +1,23 @@
+// @flow
 import React, { PureComponent } from "react";
 import styled, { withTheme } from "styled-components";
 import CodeFrame from "../CodeFrame";
 import devItems from "./devItems";
 import List from "../List";
 import ListItem from "../ListItem";
-import { transitionSettings } from "../theme";
-import { slideInDown, animationConfig } from "../animation";
+import { transitionSettings } from "../utilities/theme";
+import { slideInDown, animationConfig } from "../utilities/animation";
 import ParticlesWrapper from "../ParticlesWrapper";
 
 // DEV block in about page
 class DevBlock extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeCodeItem: 0
-    };
-    this.changeCode = this.changeCode.bind(this);
-  }
+  state = {
+    activeCodeItem: 0
+  };
 
-  changeCode(index) {
+  changeCode = (index: number) => {
     this.setState({ activeCodeItem: index }, () => this.props.enlarge("dev"));
-  }
+  };
 
   render() {
     return (
@@ -77,7 +74,7 @@ const DevHeading = styled.h1`
   font-family: 'Anton', sans-serif;
   margin: ${props => (props.isCompact ? "2.5vw 0 3vw" : "2vw 0 .5vw")};
   left: 0.04em;
-  transition: ${transitionSettings} ease-out;
+  transition: ${transitionSettings};
   animation: ${slideInDown} ${animationConfig};
 `;
 const SkillsBlock = styled.div`

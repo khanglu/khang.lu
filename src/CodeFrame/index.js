@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { transitionSettings } from "../theme";
-import { slideInUp, animationConfig } from "../animation";
+import { transitionSettings } from "../utilities/theme";
+import { slideInUp, animationConfig } from "../utilities/animation";
 
 // Code block in About page
 const CodeFrame = props => {

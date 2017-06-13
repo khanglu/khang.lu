@@ -1,8 +1,9 @@
+// @flow
 import React from "react";
 import styled from "styled-components";
-import { transitionSettings } from "../theme";
+import { transitionSettings } from "../utilities/theme";
 
-const ImageFrame = props => {
+const ImageFrame = (props: any) => {
   return (
     <ImageContainer {...props}>
       <Image {...props} src={props.image.src} />

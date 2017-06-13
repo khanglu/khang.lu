@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { zoomIn, animationConfig } from "../animation";
+import { zoomIn, animationConfig } from "../utilities/animation";
 
 const ListItem = styled.li`
   user-select: none;

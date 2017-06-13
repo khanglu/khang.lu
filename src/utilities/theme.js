@@ -24,5 +24,5 @@ const invertThemes = themes.map(
   }
 )
 */
-export const transitionSettings = ".7s";
+export const transitionSettings = "1s ease-in-out";
 export const allThemes = themes; //.concat(invertThemes)

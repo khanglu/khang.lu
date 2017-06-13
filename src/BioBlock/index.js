@@ -1,25 +1,22 @@
+// @flow
 import React, { PureComponent } from "react";
 import styled from "styled-components";
 import bioItems from "./bioItems";
 import ImageFrame from "../ImageFrame";
 import List from "../List";
 import ListItem from "../ListItem";
-import { transitionSettings } from "../theme";
+import { transitionSettings } from "../utilities/theme";
 import devItems from "../DevBlock/devItems";
-import { slideInUp, animationConfig } from "../animation";
+import { slideInUp, animationConfig } from "../utilities/animation";
 
 class BioBlock extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeImage: 0
-    };
-    this.changeImage = this.changeImage.bind(this);
-  }
+  state = {
+    activeImage: 0
+  };
 
-  changeImage(index) {
+  changeImage = (index: number) => {
     this.setState({ activeImage: index }, () => this.props.enlarge("bio"));
-  }
+  };
 
   render() {
     return (
@@ -72,7 +69,7 @@ const BioHeading = styled.h1`
   margin: ${props => (props.isCompact ? "2.5vw 0 3vw" : "2vw 0 .5vw")};
   position: relative;
   right: 0.04em;
-  transition: ${transitionSettings} ease-out;
+  transition: ${transitionSettings};
   animation: ${slideInUp} ${animationConfig};
 `;
 const BioList = styled.div`

@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 import styled from "styled-components";
 import {
@@ -5,9 +6,9 @@ import {
   slideInRight,
   slideInUp,
   animationConfig
-} from "../animation";
+} from "../utilities/animation";
 
-const Hero = props => (
+const Hero = (props: any) => (
   <HeroBlock>
     <HeroHeading tag="h1">Front End Developer</HeroHeading>
     <NameBlock>Khang</NameBlock>
