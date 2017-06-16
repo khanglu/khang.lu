@@ -1,5 +1,5 @@
 // @flow
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { allThemes } from "./utilities/theme";
 import NavBar from "./components/NavBar";
@@ -10,7 +10,7 @@ import ParticlesWrapper from "./components/ParticlesWrapper";
 import Helmet from "react-helmet";
 import { WINDOW } from "./utilities/environment";
 
-class App extends PureComponent {
+class App extends Component {
   state = {
     themeIndex: 1,
     isPortraitMode: WINDOW.innerWidth / WINDOW.innerHeight < 1.3
@@ -50,36 +50,36 @@ class App extends PureComponent {
         />
         <ThemeProvider theme={allThemes[themeIndex]}>
           <Switch>
-            <div>
-              <Route
-                exact
-                path="/"
-                render={() => (
-                  <Background>
-                    {!this.state.isPortraitMode &&
-                      <ParticlesWrapper
-                        color={allThemes[this.state.themeIndex].textColor}
-                        key={this.state.themeIndex}
-                      />}
-                    <NavBar changeTheme={this.changeTheme} page="homepage" />
-                    <Homepage changeTheme={this.changeTheme} />
-                  </Background>
-                )}
-              />
-              <Route
-                path="/about"
-                render={() => (
-                  <div>
-                    <NavBar
-                      changeTheme={this.changeTheme}
-                      isPortraitMode={this.state.isPortraitMode}
-                      page="about"
-                    />
-                    <About isPortraitMode={this.state.isPortraitMode} />
-                  </div>
-                )}
-              />
-            </div>
+
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Background>
+                  {!this.state.isPortraitMode &&
+                    <ParticlesWrapper
+                      color={allThemes[this.state.themeIndex].textColor}
+                      key={this.state.themeIndex}
+                    />}
+                  <NavBar changeTheme={this.changeTheme} page="homepage" />
+                  <Homepage changeTheme={this.changeTheme} />
+                </Background>
+              )}
+            />
+            <Route
+              path="/about"
+              render={() => (
+                <div>
+                  <NavBar
+                    changeTheme={this.changeTheme}
+                    isPortraitMode={this.state.isPortraitMode}
+                    page="about"
+                  />
+                  <About isPortraitMode={this.state.isPortraitMode} />
+                </div>
+              )}
+            />
+
           </Switch>
         </ThemeProvider>
       </div>

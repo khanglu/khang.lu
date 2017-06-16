@@ -26,26 +26,6 @@ module.exports = [
           ]
         },
         {
-          test: /\.scss$/,
-          use: [
-            {
-              loader: "style-loader"
-            },
-            {
-              loader: "css-loader",
-              options: {
-                modules: true,
-                importLoaders: 1,
-                localIdentName: "[name]__[local]___[hash:base64:5]",
-                sourceMap: true
-              }
-            },
-            {
-              loader: "sass-loader"
-            }
-          ]
-        },
-        {
           test: /\.(png|svg|jpg|gif)$/,
           use: ["file-loader"]
         }
@@ -74,26 +54,6 @@ module.exports = [
           use: [
             {
               loader: "babel-loader"
-            }
-          ]
-        },
-        {
-          test: /\.scss$/,
-          use: [
-            {
-              loader: "isomorphic-style-loader"
-            },
-            {
-              loader: "css-loader",
-              options: {
-                modules: true,
-                importLoaders: 1,
-                localIdentName: "[name]__[local]___[hash:base64:5]",
-                sourceMap: true
-              }
-            },
-            {
-              loader: "sass-loader"
             }
           ]
         },
