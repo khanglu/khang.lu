@@ -7,20 +7,21 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Homepage from "./routes/Homepage";
 import About from "./routes/About";
 import ParticlesWrapper from "./ParticlesWrapper";
+import { WINDOW } from "./utilities/environment";
 
 class App extends PureComponent {
   state = {
     themeIndex: 1,
-    isPortraitMode: window.innerWidth / window.innerHeight < 1.3
+    isPortraitMode: WINDOW.innerWidth / WINDOW.innerHeight < 1.3
   };
 
   componentDidMount() {
-    window.addEventListener("resize", this.handleResize);
+    WINDOW.addEventListener("resize", this.handleResize);
   }
 
   handleResize = () => {
     this.setState({
-      isPortraitMode: window.innerWidth / window.innerHeight < 1.3
+      isPortraitMode: WINDOW.innerWidth / WINDOW.innerHeight < 1.3
     });
   };
 

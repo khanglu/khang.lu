@@ -1,41 +1,32 @@
-import hearthstonePavel from "../../staticAssets/hearthstone-pavel.jpg";
-import pokerHand from "../../staticAssets/poker-hand.jpg";
-import motorbike from "../../staticAssets/motorbike.jpg";
-import lego from "../../staticAssets/lego.jpg";
-import arsenal from "../../staticAssets/arsenal.jpg";
-import lillie from "../../staticAssets/lillie.jpg";
-
-const bioItems = [
+export default [
   {
     name: "pokémon",
-    src: lillie,
+    src: "/static/lillie.jpg",
     desc: "Wise words from Lillie"
   },
   {
     name: "hearthstone",
-    src: hearthstonePavel,
+    src: "/static/hearthstone-pavel.jpg",
     desc: "Me defeating Pavel - European & World Champion"
   },
   {
     name: "poker",
-    src: pokerHand,
+    src: "/static/poker-hand.jpg",
     desc: "Nut of nuts"
   },
   {
     name: "motorcycles",
-    src: motorbike,
+    src: "/static/motorbike.jpg",
     desc: "Mah boy R15"
   },
   {
     name: "lego",
-    src: lego,
+    src: "/static/lego.jpg",
     desc: "Modular buildings and technics"
   },
   {
     name: "soccer",
-    src: arsenal,
+    src: "/static/arsenal.jpg",
     desc: "Gooner for life"
   }
 ];
-
-export default bioItems;
