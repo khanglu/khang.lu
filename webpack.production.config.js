@@ -10,7 +10,7 @@ module.exports = [
   {
     name: "client",
     target: "web",
-    entry: "./client.jsx",
+    entry: "./src/client.jsx",
     output: {
       path: path.join(__dirname, "static"),
       filename: "client.js",
@@ -30,30 +30,18 @@ module.exports = [
               loader: "babel-loader"
             }
           ]
+        },
+        {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: ["file-loader"]
         }
       ]
-    },
-    plugins: [
-      new webpack.DefinePlugin({
-        "process.env": {
-          NODE_ENV: '"production"'
-        }
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-          screw_ie8: true,
-          drop_console: true,
-          drop_debugger: true
-        }
-      }),
-      new webpack.optimize.OccurrenceOrderPlugin()
-    ]
+    }
   },
   {
     name: "server",
     target: "node",
-    entry: "./server.jsx",
+    entry: "./src/server.jsx",
     output: {
       path: path.join(__dirname, "static"),
       filename: "server.js",
@@ -74,22 +62,18 @@ module.exports = [
               loader: "babel-loader"
             }
           ]
+        },
+        {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: ["file-loader"]
         }
       ]
     },
     plugins: [
-      new ExtractTextPlugin({
-        filename: "styles.css",
-        allChunks: true
-      }),
-      new OptimizeCssAssetsPlugin({
-        cssProcessorOptions: { discardComments: { removeAll: true } }
-      }),
       new StatsPlugin("stats.json", {
         chunkModules: true,
         modules: true,
-        chunks: true,
-        exclude: [/node_modules[\\\/]react/]
+        chunks: true
       })
     ]
   }

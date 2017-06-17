@@ -40,11 +40,10 @@
     "styled-components": "^2.0.0"
   },
   "scripts": {
-    "start": "node src/development.js",
-    "build": "react-scripts build",
+    "start": "node src/production.js",
+    "build": "webpack --config webpack.production.config.js --progress --profile --colors",
+    "dev": "node src/development.js",
     "flow": "flow",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   }
