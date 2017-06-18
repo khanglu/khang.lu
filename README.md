@@ -1,5 +1,7 @@
 ## Corgi House
 
+Personal page of Khang Lu.
+
 ### Build with
 - [create-react-app](https://github.com/facebookincubator/create-react-app)- Create React apps with no build configuration
 - [styled-components](https://www.styled-components.com/)- Visual primitives for the component age
