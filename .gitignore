@@ -8,6 +8,7 @@
 
 # production
 static
+.next
 
 # misc
 .DS_Store
