@@ -1,6 +1,6 @@
 const devItems = [
   {
-    name: "skill set",
+    name: "tooling",
     code: [
       "/*",
       "J@VASCRIPT:",
@@ -16,7 +16,7 @@ const devItems = [
       " - Photoshop, Illustrator",
       "",
       "BACKEND:",
-      " - Fundamental comprehension. I made PHP and Node.js apps.",
+      " - Node, Express, RESTful API, MongoDB, JWT",
       "*/"
     ]
   },
