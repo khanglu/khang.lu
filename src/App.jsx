@@ -50,7 +50,6 @@ class App extends Component {
         />
         <ThemeProvider theme={allThemes[themeIndex]}>
           <Switch>
-
             <Route
               exact
               path="/"
@@ -79,7 +78,6 @@ class App extends Component {
                 </div>
               )}
             />
-
           </Switch>
         </ThemeProvider>
       </div>
