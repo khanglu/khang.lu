@@ -1,7 +1,7 @@
-import hearthstonePavel from "../../staticAssets/hearthstone-pavel.jpg";
-import lego from "../../staticAssets/lego.jpg";
-import arsenal from "../../staticAssets/arsenal.jpg";
-import lillie from "../../staticAssets/lillie.jpg";
+import hearthstonePavel from "../staticAssets/hearthstone-pavel.jpg";
+import lego from "../staticAssets/lego.jpg";
+import arsenal from "../staticAssets/arsenal.jpg";
+import lillie from "../staticAssets/lillie.jpg";
 
 const bioItems = [
   {

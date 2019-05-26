@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import corgi from "../../staticAssets/corgi.gif";
+import corgi from "../staticAssets/corgi.gif";
 
 const Corgi = () => <CorgiGif src={corgi} />;
 
@@ -23,8 +23,8 @@ const CorgiGif = styled.img`
   position: fixed;
   bottom: -4vh;
   height: 20vh;
-  animation: ${run} ${window.innerWidth / window.innerHeight * 5}s infinite;
-	animation-timing-function: linear;
+  animation: ${run} ${(window.innerWidth / window.innerHeight) * 5}s infinite;
+  animation-timing-function: linear;
 `;
 
 export default Corgi;

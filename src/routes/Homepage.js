@@ -5,7 +5,7 @@ import Hero from "../Hero";
 import Corgi from "../Corgi";
 import Door from "../Door";
 import PreLoadImage from "../utilities/PreLoadImage";
-import CorgiGif from "../../staticAssets/corgi.gif";
+import CorgiGif from "../staticAssets/corgi.gif";
 
 class Homepage extends PureComponent {
   state = {
