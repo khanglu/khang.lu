@@ -26,14 +26,6 @@ const HeroBlock = styled.div`
     transition: 0.5s;
   }
 `;
-const HeroHeading = styled.h2`
-  color: ${props => props.theme.textColor};
-  font-family: "Caesar Dressing", cursive;
-  font-size: 4.78vh;
-  margin: 0.6vh 0;
-  animation: ${slideInUp} ${animationConfig};
-  font-weight: 400;
-`;
 const NameBlock = styled.h1`
   display: inline;
   border-radius: 0.04em;
