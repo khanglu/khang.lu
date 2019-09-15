@@ -3,11 +3,11 @@ const devItems = [
     name: "tooling",
     code: [
       "/*",
-      "J@VASCRIPT:",
-      " - Vanilla ES6+, React, Redux, Flow, Webpack, Yarn, Jest",
+      "FRONT-END:",
+      " - Javascript, React, Redux, Webpack",
       "",
-      "STYLING:",
-      " - SASS, CSS Modules, styled-components, radium",
+      "BACK-END:",
+      " - Node, Express, RESTful API, AWS",
       "",
       "WORKFLOW TOOLS:",
       " - GitHub, GitFlow, Agile Development, BitBucket, Jira, Trello",
@@ -15,30 +15,9 @@ const devItems = [
       "DESIGN:",
       " - Photoshop, Illustrator",
       "",
-      "BACKEND:",
-      " - Node, Express, RESTful API, MongoDB, JWT",
+      "",
+      "",
       "*/"
-    ]
-  },
-  {
-    name: "this page",
-    code: [
-      "/*",
-      "* This page was made using the latest front-end technologies",
-      "* including react and styled-components.",
-      "* ",
-      "* It is pre-rendered using snapshot rendering to ensure",
-      "* content is drawn as fast as posible to the user's browser.",
-      "* This is like server-side rendering, but without a server!",
-      "* ",
-      "* It works regardless of device, OS, portrait or landscape.",
-      "* ",
-      "* All modern browsers supported.",
-      "*/",
-      "",
-      "",
-      "",
-      ""
     ]
   },
   {
@@ -102,48 +81,6 @@ const devItems = [
       "  }",
       "};",
       ""
-    ]
-  },
-  {
-    name: "gulp",
-    code: [
-      "// Processing SASS file and output to CSS",
-      "",
-      "app.addStyle = function(paths, filename) {",
-      "  gulp.src(paths)",
-      "    .pipe(plumber())",
-      "    .pipe(gulpif(config.sourceMaps, sourcemaps.init()))",
-      "    .pipe(sass())",
-      "    .pipe(concat(filename))",
-      "    .pipe(gulpif(config.production, cleanCSS({compatibility: 'ie8'})))",
-      "    .pipe(gulpif(config.sourceMaps, sourcemaps.write('.')))",
-      "    .pipe(gulp.dest('web/css'))",
-      "    .pipe(browserSync.reload({stream: true}));",
-      "};",
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    name: "sass",
-    code: [
-      "// How to style a link properly in SASS",
-      "",
-      "@mixin link ($link, $visit, $hover, $active) {",
-      "  a {",
-      "    color: $link;",
-      "    &:visited {",
-      "      color: $visit;",
-      "    }",
-      "    &:hover {",
-      "      color: $hover;",
-      "    }",
-      "    &:active {",
-      "      color: $active;",
-      "    }",
-      "  }",
-      "}"
     ]
   },
   {
