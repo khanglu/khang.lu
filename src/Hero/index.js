@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import styled from "styled-components";
-import { slideInLeft, slideInRight, slideInUp, animationConfig } from "../utilities/animation";
+import { slideInLeft, slideInRight, animationConfig } from "../utilities/animation";
 
 const Hero = (props: any) => (
   <HeroBlock>
