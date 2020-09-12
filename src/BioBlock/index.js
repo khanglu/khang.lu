@@ -11,7 +11,7 @@ import { slideInUp, animationConfig } from "../utilities/animation";
 
 class BioBlock extends PureComponent {
   state = {
-    activeImage: 0
+    activeImage: 0,
   };
 
   changeImage = (index: number) => {
@@ -25,11 +25,7 @@ class BioBlock extends PureComponent {
         <BioList {...this.props}>
           <List name="bio" {...this.props}>
             {bioItems.map((item, index) => (
-              <ListItem
-                {...this.props}
-                key={index}
-                active={this.state.activeImage === index}
-              >
+              <ListItem {...this.props} key={index} active={this.state.activeImage === index}>
                 <span
                   tabIndex={devItems.length + index + 1}
                   onFocus={() => this.changeImage(index)}
@@ -48,25 +44,25 @@ class BioBlock extends PureComponent {
 }
 
 const BioWrapper = styled.div`
-  ${props => {
-  if (!props.isPortraitMode) {
-    if (props.isCompact) {
-      return "flex-basis: 25vw; height: 100vh;";
-    } else {
-      return "flex-basis: 75vw; height: 100vh;";
+  ${(props) => {
+    if (!props.isPortraitMode) {
+      if (props.isCompact) {
+        return "flex-basis: 25vw; height: 100vh;";
+      } else {
+        return "flex-basis: 75vw; height: 100vh;";
+      }
     }
-  }
-}}
-  background: ${props => props.theme.textColor};
+  }}
+  background: ${(props) => props.theme.textColor};
   transition: ${transitionSettings};
   overflow-y: hidden;
 `;
 const BioHeading = styled.h1`
-  ${props => props.isPortraitMode && "text-align: center"};
-  font-size: ${props => (props.isPortraitMode ? "20vw" : props.isCompact ? "8vw" : "10vw")};
-  color: ${props => props.theme.bgColor};
-  font-family: 'Anton', sans-serif;
-  margin: ${props => (props.isCompact ? "2.5vw 0 3vw" : "2vw 0 .5vw")};
+  ${(props) => props.isPortraitMode && "text-align: center"};
+  font-size: ${(props) => (props.isPortraitMode ? "20vw" : props.isCompact ? "8vw" : "10vw")};
+  color: ${(props) => props.theme.bgColor};
+  font-family: "Anton", sans-serif;
+  margin: ${(props) => (props.isCompact ? "2.5vw 0 3vw" : "2vw 0 .5vw")};
   position: relative;
   right: 0.04em;
   transition: ${transitionSettings};
@@ -74,8 +70,8 @@ const BioHeading = styled.h1`
 `;
 const BioList = styled.div`
   vertical-align: top;
-  display: ${props => (props.isPortraitMode ? "flex" : "inline-block")};
-  width: ${props => (props.isPortraitMode ? "100vw" : props.isCompact ? "21vw" : "25vw")};
+  display: ${(props) => (props.isPortraitMode ? "flex" : "inline-block")};
+  width: ${(props) => (props.isPortraitMode ? "100vw" : props.isCompact ? "21vw" : "25vw")};
   transition: ${transitionSettings};
 `;
 
