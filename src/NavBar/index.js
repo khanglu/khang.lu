@@ -9,7 +9,6 @@ const NavBar = (props: any) => (
     <Tabitha changeTheme={props.changeTheme} />
     <NavLinkContainer>
       <NavBarLink {...props} to="/" exact>Home</NavBarLink>
-      <NavBarLink {...props} to="/about">About</NavBarLink>
     </NavLinkContainer>
   </NavBarContainer>
 );
