@@ -9,17 +9,6 @@ import ParticlesWrapper from "./ParticlesWrapper";
 class App extends PureComponent {
   state = {
     themeIndex: 0,
-    isPortraitMode: window.innerWidth / window.innerHeight < 1.3,
-  };
-
-  componentDidMount() {
-    window.addEventListener("resize", this.handleResize);
-  }
-
-  handleResize = () => {
-    this.setState({
-      isPortraitMode: window.innerWidth / window.innerHeight < 1.3,
-    });
   };
 
   changeTheme = (themeIndex) => {
@@ -37,12 +26,10 @@ class App extends PureComponent {
               path="/"
               render={() => (
                 <Background>
-                  {!this.state.isPortraitMode && (
-                    <ParticlesWrapper
-                      color={allThemes[this.state.themeIndex].textColor}
-                      key={this.state.themeIndex}
-                    />
-                  )}
+                  <ParticlesWrapper
+                    color={allThemes[this.state.themeIndex].textColor}
+                    key={this.state.themeIndex}
+                  />
                   <Homepage changeTheme={this.changeTheme} />
                 </Background>
               )}
@@ -65,8 +52,7 @@ const Background = styled.div`
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: .5s;
-  animatio
+  transition: 0.5s;
 `;
 
 export default App;

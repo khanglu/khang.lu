@@ -8,7 +8,7 @@ class ParticlesWrapper extends PureComponent {
       <Particles
         style={{ position: "absolute" }}
         // Get config string, replace default color with theme color, then parse to object
-        params={JSON.parse(particleWebConfig.replace(/#000/g, this.props.color))}
+        params={JSON.parse(JSON.stringify(particleWebConfig).replace(/#000/g, this.props.color))}
       />
     );
   }

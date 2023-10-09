@@ -41,7 +41,7 @@ const NameBlock = styled.h1`
   display: inline-block;
   color: ${(props) => props.theme.textColor};
   font-family: ${fontName}, sans-serif;
-  font-size: 8vh;
+  font-size: 6vh;
   animation: ${slideInRight} ${animationConfig};
 `;
 const SocialBlock = styled.div`
