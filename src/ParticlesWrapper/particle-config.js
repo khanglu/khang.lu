@@ -3,20 +3,20 @@
 export const particleWebConfig = `{
   "particles": {
   "number": {
-    "value": 50,
+    "value": 80,
       "density": {
       "enable": true,
-        "value_area": 800
+        "value_area": 400
     }
   },
   "color": {
-    "value": "#ffffff"
+    "value": "#000"
   },
   "shape": {
     "type": "circle",
       "stroke": {
       "width": 0,
-        "color": "#000000"
+        "color": "#fff"
     },
     "polygon": {
       "nb_sides": 5
@@ -28,7 +28,7 @@ export const particleWebConfig = `{
     }
   },
   "opacity": {
-    "value": 0.5,
+    "value": 0.2,
       "random": false,
       "anim": {
       "enable": false,
@@ -38,7 +38,7 @@ export const particleWebConfig = `{
     }
   },
   "size": {
-    "value": 3,
+    "value": 5,
       "random": true,
       "anim": {
       "enable": false,
@@ -49,8 +49,8 @@ export const particleWebConfig = `{
   },
   "line_linked": {
     "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
+      "distance": 70,
+      "color": "#000",
       "opacity": 0.4,
       "width": 1
   },

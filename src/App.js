@@ -2,16 +2,14 @@
 import React, { PureComponent } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { allThemes } from "./utilities/theme";
-import NavBar from "./NavBar";
 import { BrowserRouter, Route } from "react-router-dom";
 import Homepage from "./routes/Homepage";
-import About from "./routes/About";
 import ParticlesWrapper from "./ParticlesWrapper";
 
 class App extends PureComponent {
   state = {
-    themeIndex: 1,
-    isPortraitMode: window.innerWidth / window.innerHeight < 1.3
+    themeIndex: 0,
+    isPortraitMode: window.innerWidth / window.innerHeight < 1.3,
   };
 
   componentDidMount() {
@@ -20,17 +18,12 @@ class App extends PureComponent {
 
   handleResize = () => {
     this.setState({
-      isPortraitMode: window.innerWidth / window.innerHeight < 1.3
+      isPortraitMode: window.innerWidth / window.innerHeight < 1.3,
     });
   };
 
-  changeTheme = () => {
-    // Randomize new theme that is different from the current one
-    let newThemeIndex = this.state.themeIndex;
-    while (newThemeIndex === this.state.themeIndex) {
-      newThemeIndex = Math.floor(Math.random() * allThemes.length);
-    }
-    this.setState({ themeIndex: newThemeIndex });
+  changeTheme = (themeIndex) => {
+    this.setState({ themeIndex: themeIndex });
   };
 
   render() {
@@ -44,27 +37,14 @@ class App extends PureComponent {
               path="/"
               render={() => (
                 <Background>
-                  {!this.state.isPortraitMode &&
+                  {!this.state.isPortraitMode && (
                     <ParticlesWrapper
                       color={allThemes[this.state.themeIndex].textColor}
                       key={this.state.themeIndex}
-                    />}
-                  <NavBar changeTheme={this.changeTheme} page="homepage" />
+                    />
+                  )}
                   <Homepage changeTheme={this.changeTheme} />
                 </Background>
-              )}
-            />
-            <Route
-              path="/about"
-              render={() => (
-                <div>
-                  <NavBar
-                    changeTheme={this.changeTheme}
-                    isPortraitMode={this.state.isPortraitMode}
-                    page="about"
-                  />
-                  <About isPortraitMode={this.state.isPortraitMode} />
-                </div>
               )}
             />
           </div>
@@ -75,7 +55,7 @@ class App extends PureComponent {
 }
 
 const Background = styled.div`
-  background-color: ${props => props.theme.bgColor};
+  background-color: ${(props) => props.theme.bgColor};
   position: fixed;
   top: 0;
   left: 0;

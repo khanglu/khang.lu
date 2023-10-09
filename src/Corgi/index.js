@@ -21,8 +21,6 @@ const CorgiGif = styled.img`
   pointer-events: none;
   display: inline;
   position: fixed;
-  bottom: -4vh;
-  height: 20vh;
   animation: ${run} ${(window.innerWidth / window.innerHeight) * 5}s infinite;
   animation-timing-function: linear;
 `;

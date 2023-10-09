@@ -1,20 +1,12 @@
 const themes = [
   {
-    bgColor: "#f9f6ef",
-    textColor: "#627a68"
+    bgColor: "#222",
+    textColor: "#eee",
   },
   {
     bgColor: "#eee",
-    textColor: "#c75757"
+    textColor: "#222",
   },
-  {
-    bgColor: "#fcecb1",
-    textColor: "#c56738"
-  },
-  {
-    bgColor: "#eee",
-    textColor: "#555"
-  }
 ];
 
 /* This is invert themes array with 2 color swapped (bgColor <=> textColor)
