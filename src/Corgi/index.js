@@ -6,7 +6,7 @@ const Corgi = () => <CorgiGif src={corgi} />;
 
 const run = keyframes`
   from {
-    right: -15vw;
+    right: -270px;
   }
   to {
     right: 115vw;
