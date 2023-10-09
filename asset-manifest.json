@@ -1,18 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.a72cf665.chunk.js",
-    "main.js.map": "/static/js/main.a72cf665.chunk.js.map",
+    "main.js": "/static/js/main.8d60598f.chunk.js",
+    "main.js.map": "/static/js/main.8d60598f.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.31cc9a7f.chunk.js": "/static/js/2.31cc9a7f.chunk.js",
-    "static/js/2.31cc9a7f.chunk.js.map": "/static/js/2.31cc9a7f.chunk.js.map",
+    "static/js/2.784d92bf.chunk.js": "/static/js/2.784d92bf.chunk.js",
+    "static/js/2.784d92bf.chunk.js.map": "/static/js/2.784d92bf.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.329bf85c08152c586a03718e9a2623be.js": "/precache-manifest.329bf85c08152c586a03718e9a2623be.js",
-    "service-worker.js": "/service-worker.js",
-    "static/media/arsenal.jpg": "/static/media/arsenal.482a4a55.jpg",
-    "static/media/corgi.gif": "/static/media/corgi.93889c68.gif",
-    "static/media/hearthstone-pavel.jpg": "/static/media/hearthstone-pavel.b93e38c6.jpg",
-    "static/media/lego.jpg": "/static/media/lego.862c2b2f.jpg",
-    "static/media/lillie.jpg": "/static/media/lillie.b6fb1889.jpg"
+    "precache-manifest.da49959194b12ec412824b335a3000f9.js": "/precache-manifest.da49959194b12ec412824b335a3000f9.js",
+    "service-worker.js": "/service-worker.js"
   }
 }
